@@ -1,0 +1,59 @@
+{
+  "name": "vidload",
+  "version": "1.0.0",
+  "description": "VidLoad.cc - Privacy-First Universal Video Player & Analyzer",
+  "keywords": [
+    "video",
+    "player",
+    "analyzer",
+    "hls",
+    "m3u8",
+    "privacy",
+    "ffmpeg",
+    "webassembly"
+  ],
+  "homepage": "https://vidload.cc",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/youkale/vidload"
+  },
+  "bugs": {
+    "url": "https://github.com/youkale/vidload/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "VidLoad.cc",
+    "url": "https://vidload.cc"
+  },
+  "private": false,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@ffmpeg/ffmpeg": "^0.12.10",
+    "@ffmpeg/util": "^0.12.1",
+    "@heroicons/react": "^2.0.18",
+    "clsx": "^2.1.1",
+    "hls.js": "^1.6.5",
+    "next": "14.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwind-merge": "^3.3.1"
+  },
+  "devDependencies": {
+    "@types/hls.js": "^1.0.0",
+    "@types/node": "^20.11.0",
+    "@types/react": "^18.3.23",
+    "@types/react-dom": "^18.3.7",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^8.52.0",
+    "eslint-config-next": "14.0.0",
+    "file-loader": "^6.2.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.2.2"
+  }
+}

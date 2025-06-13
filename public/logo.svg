@@ -1,0 +1,33 @@
+<svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#8B5CF6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#EC4899;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="playGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#60A5FA;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#A78BFA;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Logo icon container -->
+  <rect x="2" y="6" width="28" height="28" rx="8" fill="url(#logoGradient)" />
+
+  <!-- Play button icon -->
+  <path d="M12 14L20 19L12 24V14Z" fill="white" />
+
+  <!-- Analysis bars -->
+  <rect x="22" y="16" width="2" height="8" fill="white" opacity="0.8" />
+  <rect x="25" y="14" width="2" height="12" fill="white" opacity="0.6" />
+  <rect x="28" y="18" width="2" height="4" fill="white" opacity="0.4" />
+
+  <!-- Text -->
+  <text x="36" y="16" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#1F2937">
+    VidLoad
+  </text>
+  <text x="36" y="28" font-family="Inter, sans-serif" font-size="8" font-weight="500" fill="#6B7280">
+    .cc
+  </text>
+</svg>

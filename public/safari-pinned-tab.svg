@@ -1,0 +1,10 @@
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <g fill="#000000">
+    <!-- Background rounded rectangle -->
+    <path d="M8 4h16c2.2 0 4 1.8 4 4v16c0 2.2-1.8 4-4 4H8c-2.2 0-4-1.8-4-4V8c0-2.2 1.8-4 4-4z"/>
+    <!-- Inner container -->
+    <path d="M10 8h12c1.1 0 2 0.9 2 2v12c0 1.1-0.9 2-2 2H10c-1.1 0-2-0.9-2-2V10c0-1.1 0.9-2 2-2z" fill="#ffffff" opacity="0.2"/>
+    <!-- Play triangle -->
+    <path d="M12 10v12l8-6-8-6z" fill="#ffffff"/>
+  </g>
+</svg>
