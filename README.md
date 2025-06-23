@@ -6,7 +6,7 @@
 [![WebAssembly](https://img.shields.io/badge/WebAssembly-FFmpeg-red)](https://ffmpegwasm.netlify.app/)
 [![GDPR Compliant](https://img.shields.io/badge/GDPR-Compliant-green)](https://gdpr.eu/)
 
-> **🔒 Privacy-First** | **🌐 Browser-Based** | **⚡ Real-Time Analysis** | **🛡️ Zero Data Collection**
+> **🔒 Privacy-First** | **🌐 Browser-Based** | **⚡ Real-Time Analysis** | **🛡️ Minimal Data Collection**
 
 A powerful, privacy-first video player and analysis tool that processes everything locally in your browser using WebAssembly technology. Perfect for analyzing video metadata, debugging HLS streams, and extracting technical details without compromising your privacy.
 
@@ -29,7 +29,7 @@ A powerful, privacy-first video player and analysis tool that processes everythi
 
 ### 🛡️ **Privacy-by-Design**
 - **100% Local Processing** - Videos never leave your device
-- **Zero Data Collection** - No analytics, cookies, or tracking
+- **Minimal Data Collection** - Basic analytics for improvement, no personal data
 - **GDPR/CCPA Compliant** - Perfect for sensitive content
 - **No Account Required** - Full functionality without registration
 
@@ -59,10 +59,18 @@ npm run dev
 # Open http://localhost:3000
 ```
 
-### Option 3: Docker (Coming Soon)
+### Option 3: Deploy to Cloudflare Pages
+
 ```bash
-docker run -p 3000:3000 youkale/vidload:latest
+# One-click deployment
+./scripts/deploy-cloudflare.sh production
+
+# Or manual deployment
+npm run build:static
+wrangler pages deploy out --project-name=vidload
 ```
+
+For detailed deployment instructions, see [Cloudflare Deployment Guide](CLOUDFLARE_DEPLOYMENT_EN.md)
 
 ## 🛠️ Tech Stack
 
@@ -129,6 +137,9 @@ npm run dev
 # Production build
 npm run build
 
+# Static export for deployment
+npm run build:static
+
 # Type checking
 npm run type-check
 
@@ -136,22 +147,101 @@ npm run type-check
 npm run lint
 ```
 
+### Deployment
+```bash
+# Deploy to Cloudflare Pages
+npm run deploy:cloudflare
+
+# Deploy to production
+npm run deploy:cloudflare:prod
+```
+
+## 🗺️ Application Routes
+
+VidLoad.cc provides a comprehensive set of pages to serve different user needs:
+
+### Core Pages
+- **[`/`](/)** - Main video player and analysis interface
+  - Upload local video files or analyze HLS streams
+  - Real-time video metadata extraction and display
+  - Interactive video player with advanced controls
+
+### Information Pages
+- **[`/about`](/about)** - Detailed information about VidLoad.cc
+  - Platform mission and key features
+  - Technology stack overview
+  - Why choose VidLoad.cc for video analysis
+
+- **[`/use-cases`](/use-cases)** - Real-world application examples
+  - Content creators and video producers workflows
+  - Developer and technical team scenarios
+  - Privacy-sensitive industry applications
+  - Enterprise and educational use cases
+
+- **[`/video-formats`](/video-formats)** - Comprehensive video format guide
+  - Supported formats (HLS, MP4, WebM, AVI, MOV, MKV)
+  - Technical specifications and use cases
+  - Resolution, bitrate, and frame rate relationships
+  - Codec compatibility information
+
+### AI & Development
+- **[`/for-ai`](/for-ai)** - AI and LLM reference guide
+  - Structured data for AI system integration
+  - API reference and technical specifications
+  - Privacy-first AI development guidelines
+  - Automated video analysis workflows
+
+### Legal & Compliance
+- **[`/privacy`](/privacy)** - Privacy policy and data protection
+  - Minimal data collection with full transparency
+  - GDPR and CCPA compliance details
+  - Privacy-by-design architecture explanation
+
+- **[`/terms`](/terms)** - Terms of service
+  - Usage guidelines and limitations
+  - Liability and warranty information
+  - Acceptable use policies
+
+- **[`/cookies`](/cookies)** - Cookie policy
+  - Essential cookies only approach
+  - Local storage usage explanation
+  - User control and data clearing options
+
+### Technical Routes
+- **[`/sitemap.xml`](/sitemap.xml)** - XML sitemap for search engines
+- **[`/robots.txt`](/robots.txt)** - Search engine crawler instructions
+
 ### Project Structure
 ```
 vidload/
 ├── app/                    # Next.js app directory
-│   ├── components/        # React components
-│   ├── for-ai/           # AI/LLM reference page
-│   ├── privacy/          # Privacy policy
-│   ├── terms/            # Terms of service
-│   ├── use-cases/        # Use cases page
-│   └── video-formats/    # Video formats guide
-├── components/            # Shared components
+│   ├── about/             # About page
+│   ├── cookies/           # Cookie policy
+│   ├── for-ai/            # AI/LLM reference page
+│   ├── privacy/           # Privacy policy
+│   ├── terms/             # Terms of service
+│   ├── use-cases/         # Use cases and examples
+│   ├── video-formats/     # Video formats guide
+│   ├── layout.tsx         # Root layout component
+│   ├── page.tsx           # Home page
+│   ├── globals.css        # Global styles
+│   ├── robots.ts          # Robots.txt generator
+│   └── sitemap.ts         # Sitemap generator
+├── components/            # Shared React components
+│   ├── FeatureGrid.tsx    # Homepage feature grid
+│   ├── TabSelector.tsx    # Tab navigation component
+│   └── VideoPlayer.tsx    # Main video player component
 ├── lib/                   # Utility libraries
 │   ├── ffmpeg/           # FFmpeg.wasm integration
+│   │   ├── index.ts      # Main FFmpeg functions
+│   │   └── performance.ts # Performance optimizations
 │   ├── hls/              # HLS parsing logic
+│   │   └── parser.ts     # HLS manifest parser
 │   └── utils.ts          # Common utilities
 ├── public/               # Static assets
+│   ├── _headers          # Cloudflare headers config
+│   ├── _redirects        # Cloudflare redirects config
+│   └── favicon.ico       # Site favicon
 └── next.config.js        # Next.js configuration
 ```
 
@@ -309,6 +399,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## ⭐ Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=youkale/vidload&type=Date)](https://star-history.com/#youkale/vidload&Date)
+
+## 📚 Documentation
+
+- **[Cloudflare Deployment Guide](CLOUDFLARE_DEPLOYMENT_EN.md)** - Complete deployment instructions
+- **[Cloudflare Issue Fixes](CLOUDFLARE_FIX_EN.md)** - Troubleshooting and fixes
+- **[Contributing Guidelines](CONTRIBUTING.md)** - How to contribute to the project
 
 ## 📧 Contact
 

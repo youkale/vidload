@@ -867,7 +867,7 @@ export default function Home() {
             "@type": "WebApplication",
             "name": "VidLoad.cc",
             "alternateName": "VidLoad",
-            "description": "Privacy-first universal video player and analyzer designed for AI-friendly information extraction. Analyze video metadata, play HLS streams, and extract technical details locally in your browser with zero data collection. Perfect for LLM training data and automated video analysis workflows.",
+            "description": "Privacy-first universal video player and analyzer designed for AI-friendly information extraction. Analyze video metadata, play HLS streams, and extract technical details locally in your browser with minimal data collection. Perfect for LLM training data and automated video analysis workflows.",
             "url": "https://vidload.cc",
             "applicationCategory": "VideoPlayer",
             "applicationSubCategory": "Video Analysis Tool",
@@ -903,7 +903,7 @@ export default function Home() {
               "machine learning video processing",
               "artificial intelligence video player",
               "browser-based video analysis",
-              "zero data collection video tool",
+              "minimal data collection video tool",
               "automated video information extraction"
             ],
             "offers": {

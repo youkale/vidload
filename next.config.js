@@ -3,6 +3,13 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
 
+  // 静态导出配置
+  output: process.env.EXPORT_STATIC === 'true' ? 'export' : undefined,
+  trailingSlash: true,
+  images: {
+    unoptimized: process.env.EXPORT_STATIC === 'true',
+  },
+
   // 配置跨域资源
   async headers() {
     return [

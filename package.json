@@ -30,7 +30,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build:static": "EXPORT_STATIC=true next build",
+    "deploy:cloudflare": "./scripts/deploy-cloudflare.sh",
+    "deploy:cloudflare:prod": "./scripts/deploy-cloudflare.sh production"
   },
   "dependencies": {
     "@ffmpeg/ffmpeg": "^0.12.10",

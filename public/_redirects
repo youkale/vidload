@@ -1,25 +1,25 @@
-# Cloudflare Pages 重定向配置
-# 适用于 VidLoad.cc
+# Cloudflare Pages Redirects Configuration
+# For VidLoad.cc
 
-# 强制 HTTPS
+# Force HTTPS
 http://vidload.cc/* https://vidload.cc/:splat 301!
 http://www.vidload.cc/* https://vidload.cc/:splat 301!
 
-# www 重定向到非 www
+# Redirect www to non-www
 https://www.vidload.cc/* https://vidload.cc/:splat 301!
 
-# 单页应用路由处理
+# Single Page Application routing
 /* /index.html 200
 
-# API 代理（如果需要）
+# API proxy (if needed)
 /api/* /api/:splat 200
 
-# 备用域名重定向
+# Fallback domain redirect
 https://vidload.pages.dev/* https://vidload.cc/:splat 301!
 
-# 旧路径重定向（如果有的话）
+# Legacy path redirects (if any)
 /home/* /:splat 301
 /app/* /:splat 301
 
-# 文件扩展名处理
+# File extension handling
 *.html /index.html 200

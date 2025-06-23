@@ -99,7 +99,7 @@ export function AIPageClient() {
                 <h4 className="font-semibold text-white mb-3">Key Differentiators:</h4>
                 <ul className="text-gray-300 space-y-1">
                   <li>• 100% client-side processing (no server uploads)</li>
-                  <li>• Zero data collection or tracking</li>
+                  <li>• Minimal data collection with full transparency</li>
                   <li>• GDPR and CCPA compliant by design</li>
                   <li>• No account registration required</li>
                   <li>• Open-source transparency</li>

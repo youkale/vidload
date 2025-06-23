@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SharedArrayBuffer Test</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .status {
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+    }
+
+    .success {
+      background: #d4edda;
+      color: #155724;
+    }
+
+    .error {
+      background: #f8d7da;
+      color: #721c24;
+    }
+
+    .warning {
+      background: #fff3cd;
+      color: #856404;
+    }
+
+    pre {
+      background: #f8f9fa;
+      padding: 15px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>SharedArrayBuffer Availability Test</h1>
+
+  <div id="results"></div>
+
+  <h2>Response Headers</h2>
+  <pre id="headers">Loading...</pre>
+
+  <script>
+    function checkSharedArrayBuffer() {
+      const results = document.getElementById('results');
+      const hasSharedArrayBuffer = typeof SharedArrayBuffer !== 'undefined';
+      const isCrossOriginIsolated = window.crossOriginIsolated;
+      const isSecureContext = window.isSecureContext;
+
+      let html = '';
+
+      html += `<div class="status ${hasSharedArrayBuffer ? 'success' : 'error'}">
+                SharedArrayBuffer: ${hasSharedArrayBuffer ? '✅ Available' : '❌ Not Available'}
+            </div>`;
+
+      html += `<div class="status ${isCrossOriginIsolated ? 'success' : 'error'}">
+                Cross-Origin Isolated: ${isCrossOriginIsolated ? '✅ Enabled' : '❌ Disabled'}
+            </div>`;
+
+      html += `<div class="status ${isSecureContext ? 'success' : 'error'}">
+                Secure Context (HTTPS): ${isSecureContext ? '✅ Enabled' : '❌ Disabled'}
+            </div>`;
+
+      if (hasSharedArrayBuffer && isCrossOriginIsolated && isSecureContext) {
+        html += `<div class="status success">
+                    🎉 All requirements met! Multi-threading should work.
+                </div>`;
+
+        // Test SharedArrayBuffer creation
+        try {
+          const buffer = new SharedArrayBuffer(1024);
+          html += `<div class="status success">
+                        ✅ SharedArrayBuffer creation test passed (1KB buffer created)
+                    </div>`;
+        } catch (error) {
+          html += `<div class="status error">
+                        ❌ SharedArrayBuffer creation failed: ${error.message}
+                    </div>`;
+        }
+      } else {
+        html += `<div class="status warning">
+                    ⚠️ Some requirements not met. Check the configuration:
+                    <ul>
+                        <li>Ensure HTTPS is enabled</li>
+                        <li>Set Cross-Origin-Embedder-Policy: credentialless</li>
+                        <li>Set Cross-Origin-Opener-Policy: same-origin</li>
+                    </ul>
+                </div>`;
+      }
+
+      results.innerHTML = html;
+    }
+
+    async function loadHeaders() {
+      try {
+        const response = await fetch(window.location.href, { method: 'HEAD' });
+        const headersDiv = document.getElementById('headers');
+        let headersText = '';
+
+        response.headers.forEach((value, key) => {
+          headersText += `${key}: ${value}\n`;
+        });
+
+        if (headersText) {
+          headersDiv.textContent = headersText;
+        } else {
+          headersDiv.textContent = 'No headers found or unable to read headers.';
+        }
+      } catch (error) {
+        document.getElementById('headers').textContent = `Error loading headers: ${error.message}`;
+      }
+    }
+
+    // Run tests
+    checkSharedArrayBuffer();
+    loadHeaders();
+
+    // Log to console for debugging
+    console.log('SharedArrayBuffer test results:', {
+      hasSharedArrayBuffer: typeof SharedArrayBuffer !== 'undefined',
+      isCrossOriginIsolated: window.crossOriginIsolated,
+      isSecureContext: window.isSecureContext,
+      userAgent: navigator.userAgent
+    });
+  </script>
+</body>
+
+</html>

@@ -1,13 +1,14 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import CookieBanner from '../components/CookieBanner';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://vidload.cc'),
   title: 'VidLoad.cc - Privacy-First Universal Video Player & Analyzer',
-  description: 'VidLoad.cc is a cutting-edge, privacy-focused universal video player and analysis tool. Analyze video metadata, play HLS streams, and extract technical details - all locally in your browser with zero data collection. GDPR compliant.',
+  description: 'VidLoad.cc is a cutting-edge, privacy-focused universal video player and analysis tool. Analyze video metadata, play HLS streams, and extract technical details - all locally in your browser with minimal data collection. GDPR compliant.',
   keywords: 'video player, video analyzer, HLS player, M3U8 player, video metadata, FFmpeg online, privacy-first video tool, local video processing, GDPR compliant, video format analyzer',
   authors: [{ name: 'VidLoad.cc Team' }],
   creator: 'VidLoad.cc',
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
   manifest: '/site.webmanifest',
   openGraph: {
     title: 'VidLoad.cc - Privacy-First Universal Video Player & Analyzer',
-    description: 'Analyze videos and play HLS streams locally in your browser. Zero data collection, GDPR compliant, open source.',
+    description: 'Analyze videos and play HLS streams locally in your browser. Minimal data collection, GDPR compliant, open source.',
     type: 'website',
     url: 'https://vidload.cc',
     siteName: 'VidLoad.cc',
@@ -78,8 +79,40 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-9JGWQHL4BJ"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+
+              // Configure consent mode before GA initialization
+              gtag('consent', 'default', {
+                analytics_storage: 'denied',
+                ad_storage: 'denied',
+                wait_for_update: 500
+              });
+
+              gtag('js', new Date());
+              gtag('config', 'G-9JGWQHL4BJ', {
+                page_title: document.title,
+                page_location: window.location.href,
+                anonymize_ip: true,
+                allow_google_signals: false,
+                allow_ad_personalization_signals: false,
+                cookie_expires: 63072000, // 2 years
+                cookie_update: false,
+                cookie_flags: 'SameSite=None;Secure'
+              });
+            `,
+          }}
+        />
+      </head>
       <body className={inter.className} suppressHydrationWarning>
         {children}
+        <CookieBanner />
       </body>
     </html>
   );

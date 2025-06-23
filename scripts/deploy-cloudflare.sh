@@ -1,50 +1,62 @@
 #!/bin/bash
 
-# VidLoad.cc Cloudflare Pages 部署脚本
+# VidLoad.cc Cloudflare Pages Deployment Script
 
 set -e
 
-echo "☁️  开始部署到 Cloudflare Pages..."
+echo "☁️  Starting deployment to Cloudflare Pages..."
 
-# 检查Wrangler CLI是否安装
+# Check if Wrangler CLI is installed
 if ! command -v wrangler &> /dev/null; then
-    echo "❌ Wrangler CLI 未安装，正在安装..."
+    echo "❌ Wrangler CLI not installed, installing..."
     npm install -g wrangler
 fi
 
-# 检查是否已登录Cloudflare
-echo "🔐 检查Cloudflare登录状态..."
+# Check if logged into Cloudflare
+echo "🔐 Checking Cloudflare login status..."
 if ! wrangler whoami &> /dev/null; then
-    echo "⚠️  请先登录Cloudflare:"
+    echo "⚠️  Please login to Cloudflare first:"
     wrangler login
 fi
 
-# 设置静态导出环境变量
+# Set static export environment variable
 export EXPORT_STATIC=true
 
-# 构建项目（静态导出）
-echo "🏗️  构建项目（静态导出）..."
+# Build project (static export)
+echo "🏗️  Building project (static export)..."
 npm ci
 npm run lint
-npm run build
-npm run export
 
-# 检查out目录是否存在
+# Build application with static export mode
+echo "📦 Building application (static export mode)..."
+EXPORT_STATIC=true npm run build
+
+# Check if out directory exists
 if [ ! -d "out" ]; then
-    echo "❌ 构建输出目录 'out' 不存在"
+    echo "❌ Build output directory 'out' does not exist"
     exit 1
 fi
 
-# 部署到Cloudflare Pages
-echo "🚀 部署到Cloudflare Pages..."
+# Deploy to Cloudflare Pages
+echo "🚀 Deploying to Cloudflare Pages..."
 if [ "$1" = "production" ]; then
-    echo "📦 部署到生产环境..."
-    wrangler pages deploy out --project-name=vidload --compatibility-date=2024-01-01
+    echo "📦 Deploying to production environment..."
+    wrangler pages deploy out --project-name=vidload
 else
-    echo "🧪 部署到预览环境..."
-    wrangler pages deploy out --project-name=vidload --compatibility-date=2024-01-01
+    echo "🧪 Deploying to preview environment..."
+    wrangler pages deploy out --project-name=vidload
 fi
 
-echo "✅ 部署完成！"
-echo "🎉 VidLoad.cc 已成功部署到 Cloudflare Pages！"
-echo "🌐 访问地址: https://vidload.pages.dev"
+echo "✅ Deployment completed!"
+echo "🎉 VidLoad.cc has been successfully deployed to Cloudflare Pages!"
+echo "🌐 Access URL: https://vidload.pages.dev"
+echo ""
+echo "🔍 To test SharedArrayBuffer support:"
+echo "   1. Visit: https://vidload.pages.dev/test-headers.html"
+echo "   2. Check browser console for test results"
+echo "   3. All three checks should show ✅ for multi-threading to work"
+echo ""
+echo "📋 If SharedArrayBuffer is not available:"
+echo "   - Headers may take a few minutes to propagate"
+echo "   - Clear browser cache and try again"
+echo "   - Check domain settings in Cloudflare dashboard"

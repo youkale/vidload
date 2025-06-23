@@ -1,60 +1,24 @@
 name = "vidload"
 compatibility_date = "2024-01-01"
-compatibility_flags = ["nodejs_compat"]
 
-[env.production]
-name = "vidload"
-routes = ["vidload.cc/*"]
+# Pages build output directory
+pages_build_output_dir = "out"
 
-[env.preview]
-name = "vidload-preview"
-
-# Pages 配置
-[[pages_build_output_dir]]
-value = "out"
-
-# 环境变量
+# Environment variables
 [vars]
 NODE_ENV = "production"
 EXPORT_STATIC = "true"
 
-# 自定义域名配置
-[[route]]
-pattern = "vidload.cc/*"
-zone_name = "vidload.cc"
+# Production environment configuration
+[env.production]
+name = "vidload"
+[env.production.vars]
+NODE_ENV = "production"
+EXPORT_STATIC = "true"
 
-# 重定向配置
-[[redirects]]
-from = "https://www.vidload.cc/*"
-to = "https://vidload.cc/:splat"
-status = 301
-
-# 头部配置
-[[headers]]
-for = "/*"
-[headers.values]
-X-Frame-Options = "DENY"
-X-Content-Type-Options = "nosniff"
-Referrer-Policy = "strict-origin-when-cross-origin"
-Permissions-Policy = "camera=(), microphone=(), geolocation=()"
-
-[[headers]]
-for = "*.js"
-[headers.values]
-Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-for = "*.css"
-[headers.values]
-Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-for = "*.wasm"
-[headers.values]
-Content-Type = "application/wasm"
-Cross-Origin-Embedder-Policy = "require-corp"
-Cross-Origin-Opener-Policy = "same-origin"
-
-# 错误页面配置
-[functions]
-directory = "functions"
+# Preview environment configuration
+[env.preview]
+name = "vidload-preview"
+[env.preview.vars]
+NODE_ENV = "development"
+EXPORT_STATIC = "true"

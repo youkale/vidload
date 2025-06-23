@@ -1,0 +1,49 @@
+name: Test Cloudflare Pages Deploy
+
+on:
+  workflow_dispatch:  # Manual trigger
+  push:
+    branches: [ main ]
+    paths:
+      - 'scripts/deploy-cloudflare.sh'
+      - 'wrangler.toml'
+      - 'functions/**'
+
+jobs:
+  test-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run linter
+        run: npm run lint
+
+      - name: Build application (static export)
+        run: npm run build:static
+
+      - name: Test wrangler config
+        run: |
+          npm install -g wrangler
+          wrangler pages project list || echo "No projects found"
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+
+      - name: Deploy to Cloudflare Pages
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: vidload
+          directory: out
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}

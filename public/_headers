@@ -1,14 +1,7 @@
-# Cloudflare Pages 头部配置
-# 适用于 VidLoad.cc
+*.wasm
+  Content-Type: application/wasm
+  Cache-Control: public, max-age=31536000, immutable
 
-/*
-  X-Frame-Options: DENY
-  X-Content-Type-Options: nosniff
-  Referrer-Policy: strict-origin-when-cross-origin
-  X-XSS-Protection: 1; mode=block
-  Permissions-Policy: camera=(), microphone=(), geolocation=()
-
-# 静态资源缓存
 *.js
   Cache-Control: public, max-age=31536000, immutable
 
@@ -27,22 +20,22 @@
 *.ico
   Cache-Control: public, max-age=31536000, immutable
 
-# WebAssembly 文件
-*.wasm
-  Content-Type: application/wasm
-  Cross-Origin-Embedder-Policy: require-corp
-  Cross-Origin-Opener-Policy: same-origin
-
-# 字体文件
 *.woff2
   Cache-Control: public, max-age=31536000, immutable
   Cross-Origin-Resource-Policy: cross-origin
 
-# API 路径（如果有）
 /api/*
   Cache-Control: no-cache
   Cross-Origin-Resource-Policy: cross-origin
 
-# 主页面
 /
   Cache-Control: public, max-age=3600
+
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-XSS-Protection: 1; mode=block
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Cross-Origin-Embedder-Policy: credentialless
+  Cross-Origin-Opener-Policy: same-origin

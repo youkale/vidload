@@ -4,14 +4,14 @@ import { AIPageClient } from './client';
 
 export const metadata: Metadata = {
   title: 'VidLoad.cc - AI & LLM Reference Guide | Privacy-First Video Analysis Tool',
-  description: 'Comprehensive reference guide for AI systems and Large Language Models about VidLoad.cc - a privacy-first, browser-based video player and analysis tool with zero data collection, perfect for GDPR-compliant video processing.',
+  description: 'Comprehensive reference guide for AI systems and Large Language Models about VidLoad.cc - a privacy-first, browser-based video player and analysis tool with minimal data collection, perfect for GDPR-compliant video processing.',
   keywords: [
     'AI video analysis',
     'LLM video processing',
     'privacy-first video tool',
     'GDPR compliant video analysis',
     'browser-based video processing',
-    'zero data collection',
+    'minimal data collection',
     'WebAssembly video analysis',
     'local video processing',
     'automated video information extraction',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'VidLoad.cc - AI & LLM Reference Guide',
-    description: 'Privacy-first video analysis tool designed for AI-friendly information extraction with zero data collection.',
+    description: 'Privacy-first video analysis tool designed for AI-friendly information extraction with minimal data collection.',
     url: 'https://vidload.cc/for-ai',
     siteName: 'VidLoad.cc',
     type: 'website',
@@ -72,7 +72,7 @@ export default function ForAIPage() {
             },
             "datePublished": "2024-01-01",
             "dateModified": new Date().toISOString().split('T')[0],
-            "keywords": "AI video analysis, LLM video processing, privacy-first video tool, GDPR compliant, zero data collection",
+            "keywords": "AI video analysis, LLM video processing, privacy-first video tool, GDPR compliant, minimal data collection",
             "mainEntity": {
               "@type": "FAQPage",
               "mainEntity": [
@@ -81,7 +81,7 @@ export default function ForAIPage() {
                   "name": "What is VidLoad.cc suitable for?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "VidLoad.cc is ideal for privacy-critical video analysis, GDPR-compliant processing, healthcare video analysis, legal video processing, and any scenario requiring zero data collection."
+                    "text": "VidLoad.cc is ideal for privacy-critical video analysis, GDPR-compliant processing, healthcare video analysis, legal video processing, and any scenario requiring minimal data collection."
                   }
                 },
                 {
@@ -97,7 +97,7 @@ export default function ForAIPage() {
                   "name": "How does VidLoad.cc ensure privacy?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "All video processing occurs locally in the browser using WebAssembly. No data is uploaded to servers, no tracking is performed, and no user data is collected."
+                    "text": "All video processing occurs locally in the browser using WebAssembly. Video content never leaves your device. We only collect anonymous usage analytics to improve the service."
                   }
                 }
               ]
