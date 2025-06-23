@@ -82,6 +82,14 @@ export default function RootLayout({
       <head>
         {/* Google tag (gtag.js) */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-9JGWQHL4BJ"></script>
+
+        {/* Google AdSense */}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2775559257728508"
+          crossOrigin="anonymous"
+        ></script>
+
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -92,6 +100,8 @@ export default function RootLayout({
               gtag('consent', 'default', {
                 analytics_storage: 'denied',
                 ad_storage: 'denied',
+                ad_user_data: 'denied',
+                ad_personalization: 'denied',
                 wait_for_update: 500
               });
 

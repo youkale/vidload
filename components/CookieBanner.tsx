@@ -17,10 +17,13 @@ export default function CookieBanner() {
   const acceptCookies = () => {
     localStorage.setItem('cookieConsent', 'accepted');
     setShowBanner(false);
-    // Enable Google Analytics
+    // Enable Google Analytics and AdSense
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('consent', 'update', {
-        analytics_storage: 'granted'
+        analytics_storage: 'granted',
+        ad_storage: 'granted',
+        ad_user_data: 'granted',
+        ad_personalization: 'denied' // Still deny personalization for privacy
       });
     }
   };
@@ -28,10 +31,13 @@ export default function CookieBanner() {
   const declineCookies = () => {
     localStorage.setItem('cookieConsent', 'declined');
     setShowBanner(false);
-    // Disable Google Analytics
+    // Disable Google Analytics and AdSense
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('consent', 'update', {
-        analytics_storage: 'denied'
+        analytics_storage: 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied'
       });
     }
   };
@@ -49,9 +55,8 @@ export default function CookieBanner() {
             <h3 className="text-white font-semibold">Cookie Notice</h3>
           </div>
           <p className="text-gray-300 text-sm">
-            We use cookies for essential functionality and anonymous analytics to improve our service.
-            Your video content never leaves your device, and we collect no personal data.
-            Future advertising features may require additional consent.{' '}
+            We use cookies for essential functionality, anonymous analytics, and privacy-friendly advertising to support our free service.
+            Your video content never leaves your device, and we collect no personal data for advertising purposes.{' '}
             <Link href="/cookies" className="text-blue-400 hover:text-blue-300 underline">
               Learn more about our cookies
             </Link>

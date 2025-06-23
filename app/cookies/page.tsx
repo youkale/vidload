@@ -296,13 +296,14 @@ export default function CookiesPage() {
               <h3 className="text-lg font-semibold text-white">Services We Use</h3>
               <ul className="list-disc pl-6 space-y-2">
                 <li><strong>Google Analytics:</strong> Anonymous usage analytics with enhanced privacy settings</li>
+                <li><strong>Google AdSense:</strong> Contextual advertising (with user consent only)</li>
                 <li><strong>Cloudflare:</strong> Content delivery and security (no tracking cookies)</li>
               </ul>
 
-              <h3 className="text-lg font-semibold text-white mt-6">Services We Don't Use</h3>
+              <h3 className="text-lg font-semibold text-white mt-6">What We Still Don't Use</h3>
               <ul className="list-disc pl-6 space-y-2">
                 <li><strong>No Social Media Integration:</strong> No Facebook, Twitter, or social tracking</li>
-                <li><strong>No Advertising Networks:</strong> No ad serving or targeting cookies</li>
+                <li><strong>No Personalized Advertising:</strong> No behavioral targeting or user profiling</li>
                 <li><strong>No Marketing Automation:</strong> No email tracking or lead generation tools</li>
                 <li><strong>No Chat Services:</strong> No third-party chat or support widgets with tracking</li>
               </ul>
@@ -316,36 +317,36 @@ export default function CookiesPage() {
             </div>
           </section>
 
-          {/* Future Cookie Considerations */}
+          {/* Advertising Cookie Implementation */}
           <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4 text-blue-400">9. Future Cookie Considerations</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-blue-400">9. Advertising Cookie Implementation</h2>
             <div className="space-y-4 text-gray-300">
               <p>
-                We believe in transparency about potential future changes to our cookie usage.
+                We have implemented Google AdSense to support our free service with privacy-friendly advertising.
               </p>
 
-              <div className="bg-yellow-900/20 border border-yellow-700 rounded-lg p-6">
-                <h3 className="text-yellow-300 font-semibold mb-4">🔮 Potential Advertising Cookies</h3>
-                <p className="text-yellow-100 mb-3">
-                  If we implement advertising in the future to support the free service, we may introduce:
+              <div className="bg-blue-900/20 border border-blue-700 rounded-lg p-6">
+                <h3 className="text-blue-300 font-semibold mb-4">📢 Current Advertising Cookies</h3>
+                <p className="text-blue-100 mb-3">
+                  With your explicit consent, we now use the following advertising cookies:
                 </p>
                 <div className="space-y-3">
                   <div>
-                    <h4 className="font-medium text-white">Contextual Advertising Cookies</h4>
-                    <ul className="text-sm text-yellow-100 space-y-1 mt-2">
-                      <li>• Page-based ad relevance (not user-based)</li>
-                      <li>• No cross-site tracking</li>
-                      <li>• Clear opt-out mechanisms</li>
-                      <li>• GDPR-compliant consent required</li>
+                    <h4 className="font-medium text-white">Google AdSense Cookies</h4>
+                    <ul className="text-sm text-blue-100 space-y-1 mt-2">
+                      <li>• Contextual ad serving based on page content</li>
+                      <li>• Ad delivery and frequency management</li>
+                      <li>• Basic ad performance measurement (anonymized)</li>
+                      <li>• Fraud prevention and security</li>
                     </ul>
                   </div>
                   <div>
-                    <h4 className="font-medium text-white">What We Will NOT Use</h4>
-                    <ul className="text-sm text-yellow-100 space-y-1 mt-2">
+                    <h4 className="font-medium text-white">What We Still Don't Use</h4>
+                    <ul className="text-sm text-blue-100 space-y-1 mt-2">
                       <li>• No behavioral tracking cookies</li>
                       <li>• No cross-device tracking</li>
-                      <li>• No personal data for advertising</li>
-                      <li>• No third-party advertising networks with tracking</li>
+                      <li>• No ad personalization based on user data</li>
+                      <li>• No remarketing or retargeting cookies</li>
                     </ul>
                   </div>
                 </div>

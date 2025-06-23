@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState, useCallback } from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 import VideoPlayer from '@/components/VideoPlayer';
+import AdSenseAd from '@/components/AdSenseAd';
 import { getVideoMetadata, type VideoMetadata } from '@/lib/ffmpeg';
 import { parseM3U8, type HLSStreamInfo, type HLSSegment, type HLSVariantPlaylist, formatBandwidth } from '@/lib/hls/parser';
 import { formatRelativeTime, Language, setLanguage, getCurrentLanguage, t, copyToClipboard, getLoadingMessageWithSize } from '@/lib/utils';
@@ -1402,6 +1403,15 @@ export default function Home() {
               </div>
             </div>
           )}
+
+          {/* 广告展示区域 */}
+          <div className="flex justify-center mb-8">
+            <AdSenseAd
+              adSlot="1234567890"
+              adFormat="horizontal"
+              className="max-w-2xl w-full"
+            />
+          </div>
 
           {/* 简化的底部链接 */}
           <div className="bg-gray-800 rounded-lg p-6">

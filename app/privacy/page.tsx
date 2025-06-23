@@ -183,15 +183,17 @@ export default function PrivacyPage() {
               <h3 className="text-lg font-semibold text-white">Services We Use</h3>
               <ul className="list-disc pl-6 space-y-2">
                 <li><strong>Google Analytics:</strong> Anonymous usage analytics with IP anonymization enabled</li>
+                <li><strong>Google AdSense:</strong> Contextual advertising (with user consent only)</li>
                 <li><strong>Cloudflare:</strong> Content delivery and security services</li>
               </ul>
 
-              <h3 className="text-lg font-semibold text-white mt-6">We Do Not Use</h3>
+              <h3 className="text-lg font-semibold text-white mt-6">What We Still Don't Use</h3>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Social media tracking pixels</li>
-                <li>Advertising networks or remarketing services</li>
+                <li>Personalized advertising or remarketing services</li>
                 <li>Customer support chat services that track users</li>
                 <li>Third-party data brokers or marketing services</li>
+                <li>Cross-site tracking or user profiling</li>
               </ul>
 
               <div className="bg-blue-900/20 border border-blue-700 rounded p-4 mt-4">
@@ -238,28 +240,27 @@ export default function PrivacyPage() {
             </div>
           </section>
 
-          {/* Future Service Considerations */}
+          {/* Advertising Implementation */}
           <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4 text-blue-400">10. Future Service Considerations</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-blue-400">10. Advertising Implementation</h2>
             <div className="space-y-4 text-gray-300">
               <p>
-                We are committed to transparency about any potential future changes to our service that may affect privacy.
+                To support our free service, we have implemented privacy-friendly advertising with your explicit consent.
               </p>
 
-              <h3 className="text-lg font-semibold text-white">Potential Future Features</h3>
-              <div className="bg-yellow-900/20 border border-yellow-700 rounded p-6">
-                <h4 className="font-semibold text-yellow-300 mb-3">📢 Advertising Consideration</h4>
-                <p className="text-yellow-100 mb-3">
-                  To support the free service, we may consider implementing privacy-friendly advertising in the future.
-                  If implemented, this would include:
+              <h3 className="text-lg font-semibold text-white">Current Advertising Features</h3>
+              <div className="bg-blue-900/20 border border-blue-700 rounded p-6">
+                <h4 className="font-semibold text-blue-300 mb-3">📢 Google AdSense Integration</h4>
+                <p className="text-blue-100 mb-3">
+                  We use Google AdSense to display contextual advertisements. Our implementation includes:
                 </p>
-                <ul className="text-yellow-100 text-sm space-y-1">
+                <ul className="text-blue-100 text-sm space-y-1">
                   <li>• <strong>Contextual advertising only</strong> - based on page content, not user behavior</li>
                   <li>• <strong>No personal data collection</strong> for advertising purposes</li>
-                  <li>• <strong>Clear user consent</strong> required before enabling any advertising features</li>
-                  <li>• <strong>Easy opt-out mechanisms</strong> for users who prefer ad-free experience</li>
-                  <li>• <strong>Continued video privacy</strong> - video content remains on your device</li>
-                  <li>• <strong>Full transparency</strong> and advance notification before implementation</li>
+                  <li>• <strong>User consent required</strong> - ads only shown with explicit consent</li>
+                  <li>• <strong>Easy opt-out</strong> - decline advertising cookies to use ad-free</li>
+                  <li>• <strong>Video privacy maintained</strong> - video content never leaves your device</li>
+                  <li>• <strong>No ad personalization</strong> - ads are not tailored to individual users</li>
                 </ul>
               </div>
 
