@@ -732,12 +732,30 @@ const VideoPlayer: FC<VideoPlayerProps> = ({ url, onEnded, isLocalFile = false, 
   return (
     <div className="relative w-full aspect-video bg-black rounded-lg overflow-hidden">
       {!url && (
-        <div className="absolute inset-0 flex flex-col items-center justify-center gap-6 text-gray-500 bg-gradient-to-br from-gray-800 via-gray-850 to-gray-900">
+        <div
+          className="absolute inset-0 flex flex-col items-center justify-center gap-6 text-gray-500 video-player-cover gradient-cover"
+          style={{
+            zIndex: 10,
+            minHeight: '100%',
+            minWidth: '100%'
+          }}
+        >
           {/* 优化的图标占位符 */}
           <div className="relative">
             {/* 现代化的播放器图标 */}
-            <div className="w-20 h-20 bg-gray-700/50 rounded-2xl border border-gray-600/50 flex items-center justify-center backdrop-blur-sm">
-              <div className="w-12 h-12 bg-gray-600/70 rounded-xl flex items-center justify-center">
+            <div
+              className="w-20 h-20 rounded-2xl border flex items-center justify-center"
+              style={{
+                backgroundColor: 'rgba(75, 85, 99, 0.5)',
+                borderColor: 'rgba(75, 85, 99, 0.5)',
+                backdropFilter: 'blur(4px)',
+                WebkitBackdropFilter: 'blur(4px)' // Safari/Chrome兼容性
+              }}
+            >
+              <div
+                className="w-12 h-12 rounded-xl flex items-center justify-center"
+                style={{ backgroundColor: 'rgba(75, 85, 99, 0.7)' }}
+              >
                 <svg
                   className="w-6 h-6 text-gray-300"
                   viewBox="0 0 24 24"
@@ -748,9 +766,22 @@ const VideoPlayer: FC<VideoPlayerProps> = ({ url, onEnded, isLocalFile = false, 
               </div>
             </div>
 
-            {/* 装饰性光点 */}
-            <div className="absolute -top-1 -right-1 w-3 h-3 bg-blue-500/60 rounded-full animate-pulse"></div>
-            <div className="absolute -bottom-1 -left-1 w-2 h-2 bg-purple-500/40 rounded-full animate-pulse delay-700"></div>
+            {/* 装饰性光点 - 使用更好的兼容性写法 */}
+            <div
+              className="absolute -top-1 -right-1 w-3 h-3 rounded-full animate-pulse"
+              style={{
+                backgroundColor: 'rgb(59, 130, 246)',
+                opacity: 0.6
+              }}
+            ></div>
+            <div
+              className="absolute -bottom-1 -left-1 w-2 h-2 rounded-full animate-pulse"
+              style={{
+                backgroundColor: 'rgb(168, 85, 247)',
+                opacity: 0.4,
+                animationDelay: '0.7s'
+              }}
+            ></div>
           </div>
 
           {/* 文字说明 */}
