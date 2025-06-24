@@ -36,77 +36,138 @@ export async function initFFmpeg() {
       });
 
       // Check for multi-threading support
-      if (typeof SharedArrayBuffer === 'undefined') {
+      const hasSharedArrayBuffer = typeof SharedArrayBuffer !== 'undefined';
+      if (!hasSharedArrayBuffer) {
         console.warn('SharedArrayBuffer is not available. Multi-threading will be disabled.');
         console.warn('To enable multi-threading, ensure HTTPS and proper headers are set.');
       } else {
         console.log('SharedArrayBuffer is available. Multi-threading enabled.');
       }
 
-      // Use jsDelivr CDN for multi-threaded version
-      const CDN_BASE = 'https://cdn.jsdelivr.net/npm/@ffmpeg/core-mt@0.12.6/dist/umd';
-
-      console.log('Loading FFmpeg multi-threaded version from jsDelivr CDN...');
-
-      const coreURL = `${CDN_BASE}/ffmpeg-core.js`;
-      const wasmURL = `${CDN_BASE}/ffmpeg-core.wasm`;
-      const workerURL = `${CDN_BASE}/ffmpeg-core.worker.js`;
-
-      console.log('Loading multi-threaded FFmpeg with URLs:', { coreURL, wasmURL, workerURL });
-
-      // Load FFmpeg with multi-threading support and comprehensive fallback
-      try {
-        // First attempt: Use toBlobURL for better cross-origin compatibility
-        console.log('Attempting multi-threaded FFmpeg load with blob URLs...');
-        const coreBlob = await toBlobURL(coreURL, 'text/javascript');
-        const wasmBlob = await toBlobURL(wasmURL, 'application/wasm');
-        const workerBlob = await toBlobURL(workerURL, 'text/javascript');
-
-        await instance.load({
-          coreURL: coreBlob,
-          wasmURL: wasmBlob,
-          workerURL: workerBlob,
-        });
-        console.log('✅ Multi-threaded FFmpeg loaded successfully with blob URLs');
-      } catch (multiThreadError) {
-        console.warn('❌ Multi-threaded blob version failed:', multiThreadError);
-
+      // Strategy 1: Try multi-threaded version if SharedArrayBuffer is available
+      if (hasSharedArrayBuffer) {
         try {
-          // Second attempt: Single-threaded with blob URLs
-          console.log('Attempting single-threaded FFmpeg load with blob URLs...');
-          const coreBlob = await toBlobURL(coreURL, 'text/javascript');
-          const wasmBlob = await toBlobURL(wasmURL, 'application/wasm');
+          const MT_CDN_BASE = 'https://cdn.jsdelivr.net/npm/@ffmpeg/core-mt@0.12.6/dist/umd';
+          console.log('Loading FFmpeg multi-threaded version from jsDelivr CDN...');
+
+          const coreURL = `${MT_CDN_BASE}/ffmpeg-core.js`;
+          const wasmURL = `${MT_CDN_BASE}/ffmpeg-core.wasm`;
+          const workerURL = `${MT_CDN_BASE}/ffmpeg-core.worker.js`;
+
+          console.log('Loading multi-threaded FFmpeg with URLs:', { coreURL, wasmURL, workerURL });
+
+          // Use toBlobURL for better cross-origin compatibility
+          console.log('Attempting multi-threaded FFmpeg load with blob URLs...');
+          const [coreBlob, wasmBlob, workerBlob] = await Promise.all([
+            toBlobURL(coreURL, 'text/javascript'),
+            toBlobURL(wasmURL, 'application/wasm'),
+            toBlobURL(workerURL, 'text/javascript')
+          ]);
 
           await instance.load({
             coreURL: coreBlob,
             wasmURL: wasmBlob,
+            workerURL: workerBlob,
           });
-          console.log('✅ Single-threaded FFmpeg loaded successfully with blob URLs');
-        } catch (singleThreadError) {
-          console.warn('❌ Single-threaded blob version failed:', singleThreadError);
 
-          // Third attempt: Direct CDN URLs (fallback)
-          console.log('Attempting direct CDN load...');
-          try {
-            await instance.load({
-              coreURL,
-              wasmURL,
-            });
-            console.log('✅ Direct CDN FFmpeg loaded successfully');
-          } catch (directError) {
-            console.error('❌ All FFmpeg loading methods failed:', directError);
-            throw new Error('Unable to load FFmpeg. Please check your internet connection and try again.');
-          }
+          console.log('✅ Multi-threaded FFmpeg loaded successfully with blob URLs');
+          FFmpegPerformanceMonitor.logSystemCapabilities();
+          ffmpeg = instance;
+          return instance;
+        } catch (multiThreadError) {
+          console.warn('❌ Multi-threaded version failed:', multiThreadError);
+          console.log('Falling back to single-threaded version...');
         }
       }
 
-      console.log('FFmpeg multi-threaded version loaded successfully');
+      // Strategy 2: Single-threaded version with blob URLs
+      try {
+        const SINGLE_CDN_BASE = 'https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.6/dist/umd';
+        console.log('Attempting single-threaded FFmpeg load with blob URLs...');
 
-      // Log system capabilities and performance information
-      FFmpegPerformanceMonitor.logSystemCapabilities();
+        const coreURL = `${SINGLE_CDN_BASE}/ffmpeg-core.js`;
+        const wasmURL = `${SINGLE_CDN_BASE}/ffmpeg-core.wasm`;
 
-      ffmpeg = instance;
-      return instance;
+        console.log('Loading single-threaded FFmpeg with URLs:', { coreURL, wasmURL });
+
+        const [coreBlob, wasmBlob] = await Promise.all([
+          toBlobURL(coreURL, 'text/javascript'),
+          toBlobURL(wasmURL, 'application/wasm')
+        ]);
+
+        await instance.load({
+          coreURL: coreBlob,
+          wasmURL: wasmBlob,
+        });
+
+        console.log('✅ Single-threaded FFmpeg loaded successfully with blob URLs');
+        FFmpegPerformanceMonitor.logSystemCapabilities();
+        ffmpeg = instance;
+        return instance;
+      } catch (singleThreadError) {
+        console.warn('❌ Single-threaded blob version failed:', singleThreadError);
+      }
+
+      // Strategy 3: Try alternative CDN (unpkg)
+      try {
+        const ALT_CDN_BASE = 'https://unpkg.com/@ffmpeg/core@0.12.6/dist/umd';
+        console.log('Attempting alternative CDN (unpkg) with blob URLs...');
+
+        const coreURL = `${ALT_CDN_BASE}/ffmpeg-core.js`;
+        const wasmURL = `${ALT_CDN_BASE}/ffmpeg-core.wasm`;
+
+        console.log('Loading FFmpeg from unpkg with URLs:', { coreURL, wasmURL });
+
+        const [coreBlob, wasmBlob] = await Promise.all([
+          toBlobURL(coreURL, 'text/javascript'),
+          toBlobURL(wasmURL, 'application/wasm')
+        ]);
+
+        await instance.load({
+          coreURL: coreBlob,
+          wasmURL: wasmBlob,
+        });
+
+        console.log('✅ Alternative CDN FFmpeg loaded successfully');
+        FFmpegPerformanceMonitor.logSystemCapabilities();
+        ffmpeg = instance;
+        return instance;
+      } catch (altCdnError) {
+        console.warn('❌ Alternative CDN failed:', altCdnError);
+      }
+
+      // Strategy 4: Direct CDN URLs (final fallback)
+      try {
+        const FALLBACK_CDN_BASE = 'https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.6/dist/umd';
+        console.log('Attempting direct CDN load as final fallback...');
+
+        const coreURL = `${FALLBACK_CDN_BASE}/ffmpeg-core.js`;
+        const wasmURL = `${FALLBACK_CDN_BASE}/ffmpeg-core.wasm`;
+
+        console.log('Loading FFmpeg directly from CDN:', { coreURL, wasmURL });
+
+        await instance.load({
+          coreURL,
+          wasmURL,
+        });
+
+        console.log('✅ Direct CDN FFmpeg loaded successfully');
+        FFmpegPerformanceMonitor.logSystemCapabilities();
+        ffmpeg = instance;
+        return instance;
+      } catch (directError) {
+        console.error('❌ All FFmpeg loading methods failed:', directError);
+        console.log('📋 Troubleshooting tips:');
+        console.log('   1. Check your internet connection');
+        console.log('   2. Try refreshing the page');
+        console.log('   3. Check if your network blocks CDN access');
+        console.log('   4. Try using a different browser');
+        console.log('   5. Check browser console for specific error details');
+
+        throw new Error(`Unable to load FFmpeg. Network issues or CDN blocking detected. Please check your internet connection and try again. Error: ${directError instanceof Error ? directError.message : String(directError)}`);
+      }
+
+
     })();
 
     return await ffmpegLoadPromise;

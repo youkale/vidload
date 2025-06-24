@@ -1404,6 +1404,44 @@ export default function Home() {
             </div>
           )}
 
+          {/* Educational Content Section */}
+          <div className="bg-gradient-to-r from-green-900/20 to-blue-900/20 border border-green-700 rounded-xl p-6 mb-8">
+            <div className="text-center mb-6">
+              <h2 className="text-2xl font-bold text-green-400 mb-3">📚 Learn Video Fundamentals</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Want to understand the differences between video resolution, bitrate, and frame rate? We explain these important concepts in the simplest way possible!
+              </p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-4">
+              <div className="bg-green-800/30 rounded-lg p-4 text-center">
+                <div className="text-2xl mb-2">📺</div>
+                <h3 className="font-semibold text-green-300 mb-2">Resolution</h3>
+                <p className="text-sm text-gray-300">Determines picture clarity<br />720p, 1080p, 4K differences</p>
+              </div>
+              <div className="bg-blue-800/30 rounded-lg p-4 text-center">
+                <div className="text-2xl mb-2">🚀</div>
+                <h3 className="font-semibold text-blue-300 mb-2">Bitrate</h3>
+                <p className="text-sm text-gray-300">Affects file size and quality<br />Finding the perfect balance</p>
+              </div>
+              <div className="bg-purple-800/30 rounded-lg p-4 text-center">
+                <div className="text-2xl mb-2">🎬</div>
+                <h3 className="font-semibold text-purple-300 mb-2">Frame Rate</h3>
+                <p className="text-sm text-gray-300">Controls motion smoothness<br />24fps vs 60fps choices</p>
+              </div>
+            </div>
+            <div className="text-center mt-6">
+              <Link
+                href="/video-basics"
+                className="inline-flex items-center px-6 py-3 bg-green-600 hover:bg-green-700 rounded-lg font-medium transition-colors"
+              >
+                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+                Start Learning Video Basics
+              </Link>
+            </div>
+          </div>
+
           {/* 广告展示区域 */}
           <div className="flex justify-center mb-8">
             <AdSenseAd
@@ -1417,7 +1455,16 @@ export default function Home() {
           <div className="bg-gray-800 rounded-lg p-6">
             <div className="text-center mb-6">
               <h3 className="text-lg font-semibold text-white mb-4">Learn More</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                <Link
+                  href="/video-basics"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-green-600 hover:bg-green-700 rounded-lg font-medium transition-colors"
+                >
+                  <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                  Video Basics
+                </Link>
                 <Link
                   href="/video-formats"
                   className="inline-flex items-center justify-center px-6 py-3 bg-gray-700 hover:bg-gray-600 rounded-lg font-medium transition-colors"
