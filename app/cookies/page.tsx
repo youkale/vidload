@@ -88,79 +88,48 @@ export default function CookiesPage() {
 
           {/* Cookies We Don't Use */}
           <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4 text-blue-400">3. Analytics Cookies We Use</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-blue-400">3. Cookies We DON'T Use</h2>
             <div className="space-y-4 text-gray-300">
-              <p>VidLoad.cc uses <strong>minimal analytics cookies</strong> to improve our service:</p>
-
-              <div className="bg-blue-900/20 border border-blue-700 rounded-lg p-6 mb-6">
-                <h3 className="text-blue-300 font-semibold mb-4">📊 Google Analytics Cookies</h3>
-                <div className="space-y-3">
-                  <div>
-                    <h4 className="font-medium text-white">Purpose</h4>
-                    <p className="text-sm text-gray-300">Anonymous usage analytics to understand how users interact with VidLoad.cc</p>
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-white">Privacy Settings</h4>
-                    <ul className="text-sm text-gray-300 space-y-1">
-                      <li>• IP addresses are anonymized</li>
-                      <li>• No advertising features enabled</li>
-                      <li>• No cross-device tracking</li>
-                      <li>• No user-specific targeting</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-white">Data Collected</h4>
-                    <ul className="text-sm text-gray-300 space-y-1">
-                      <li>• Page views and session duration</li>
-                      <li>• Browser type and version</li>
-                      <li>• General geographic region</li>
-                      <li>• Feature usage patterns</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <h2 className="text-2xl font-semibold mb-4 text-blue-400">4. Cookies We DON'T Use</h2>
               <p>VidLoad.cc explicitly <strong>does not use</strong> the following types of cookies:</p>
 
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-red-900/20 border border-red-700 rounded-lg p-4">
+                  <h3 className="text-red-400 font-semibold mb-2">❌ Tracking Cookies</h3>
+                  <ul className="text-sm space-y-1">
+                    <li>• No Google Analytics cookies</li>
+                    <li>• No user behavior tracking</li>
+                    <li>• No cross-site tracking</li>
+                    <li>• No fingerprinting cookies</li>
+                  </ul>
+                </div>
+
+                <div className="bg-red-900/20 border border-red-700 rounded-lg p-4">
                   <h3 className="text-red-400 font-semibold mb-2">❌ Advertising Cookies</h3>
                   <ul className="text-sm space-y-1">
                     <li>• No ad targeting cookies</li>
-                    <li>• No user behavior profiling</li>
-                    <li>• No cross-site tracking</li>
-                    <li>• No remarketing pixels</li>
+                    <li>• No marketing cookies</li>
+                    <li>• No retargeting pixels</li>
+                    <li>• No social media cookies</li>
                   </ul>
                 </div>
 
                 <div className="bg-red-900/20 border border-red-700 rounded-lg p-4">
-                  <h3 className="text-red-400 font-semibold mb-2">❌ Marketing Cookies</h3>
+                  <h3 className="text-red-400 font-semibold mb-2">❌ Third-party Cookies</h3>
                   <ul className="text-sm space-y-1">
-                    <li>• No retargeting cookies</li>
-                    <li>• No social media tracking</li>
-                    <li>• No email marketing pixels</li>
-                    <li>• No conversion tracking</li>
+                    <li>• No external service cookies</li>
+                    <li>• No CDN tracking cookies</li>
+                    <li>• No analytics service cookies</li>
+                    <li>• No embedded content cookies</li>
                   </ul>
                 </div>
 
                 <div className="bg-red-900/20 border border-red-700 rounded-lg p-4">
-                  <h3 className="text-red-400 font-semibold mb-2">❌ Third-party Tracking</h3>
+                  <h3 className="text-red-400 font-semibold mb-2">❌ Performance Cookies</h3>
                   <ul className="text-sm space-y-1">
-                    <li>• No external tracking services</li>
-                    <li>• No social media widgets</li>
-                    <li>• No embedded analytics</li>
-                    <li>• No cross-domain tracking</li>
-                  </ul>
-                </div>
-
-                <div className="bg-red-900/20 border border-red-700 rounded-lg p-4">
-                  <h3 className="text-red-400 font-semibold mb-2">❌ Personalization Cookies</h3>
-                  <ul className="text-sm space-y-1">
-                    <li>• No user profiling</li>
-                    <li>• No behavioral targeting</li>
-                    <li>• No content personalization</li>
-                    <li>• No recommendation tracking</li>
+                    <li>• No usage analytics cookies</li>
+                    <li>• No performance monitoring</li>
+                    <li>• No error tracking cookies</li>
+                    <li>• No A/B testing cookies</li>
                   </ul>
                 </div>
               </div>
@@ -169,7 +138,7 @@ export default function CookiesPage() {
 
           {/* Local Storage */}
           <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4 text-blue-400">5. Local Storage (Not Cookies)</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-blue-400">4. Local Storage (Not Cookies)</h2>
             <div className="space-y-4 text-gray-300">
               <p>
                 In addition to minimal cookies, VidLoad.cc uses browser Local Storage for enhanced functionality.
@@ -216,7 +185,7 @@ export default function CookiesPage() {
 
           {/* Legal Compliance */}
           <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4 text-blue-400">6. Legal Compliance</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-blue-400">5. Legal Compliance</h2>
 
             <div className="space-y-6 text-gray-300">
               <div>
@@ -245,7 +214,7 @@ export default function CookiesPage() {
 
           {/* Managing Cookies */}
           <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4 text-blue-400">7. Managing Your Cookies</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-blue-400">6. Managing Your Cookies</h2>
             <div className="space-y-4 text-gray-300">
               <h3 className="text-lg font-semibold text-white">Browser Cookie Controls</h3>
               <p>You can control cookies through your browser settings:</p>
@@ -291,72 +260,21 @@ export default function CookiesPage() {
 
           {/* Third-party Services */}
           <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4 text-blue-400">8. Third-party Services</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-blue-400">7. Third-party Services</h2>
             <div className="space-y-4 text-gray-300">
-              <h3 className="text-lg font-semibold text-white">Services We Use</h3>
+              <p>VidLoad.cc has a strict no third-party policy:</p>
               <ul className="list-disc pl-6 space-y-2">
-                <li><strong>Google Analytics:</strong> Anonymous usage analytics with enhanced privacy settings</li>
-                <li><strong>Google AdSense:</strong> Contextual advertising (with user consent only)</li>
-                <li><strong>Cloudflare:</strong> Content delivery and security (no tracking cookies)</li>
-              </ul>
-
-              <h3 className="text-lg font-semibold text-white mt-6">What We Still Don't Use</h3>
-              <ul className="list-disc pl-6 space-y-2">
+                <li><strong>No External Analytics:</strong> No Google Analytics, Mixpanel, or similar services</li>
                 <li><strong>No Social Media Integration:</strong> No Facebook, Twitter, or social tracking</li>
-                <li><strong>No Personalized Advertising:</strong> No behavioral targeting or user profiling</li>
-                <li><strong>No Marketing Automation:</strong> No email tracking or lead generation tools</li>
-                <li><strong>No Chat Services:</strong> No third-party chat or support widgets with tracking</li>
+                <li><strong>No Advertising Networks:</strong> No ad serving or targeting cookies</li>
+                <li><strong>No CDN Tracking:</strong> Static assets served without tracking</li>
+                <li><strong>No Chat Services:</strong> No third-party chat or support widgets</li>
               </ul>
 
-              <div className="bg-blue-900/20 border border-blue-700 rounded p-4 mt-4">
-                <p className="text-blue-100">
-                  <strong>Privacy-First Approach:</strong> Even with Google Analytics, we've configured it with maximum privacy settings:
-                  IP anonymization, no advertising features, and no cross-device tracking.
-                </p>
-              </div>
-            </div>
-          </section>
-
-          {/* Advertising Cookie Implementation */}
-          <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4 text-blue-400">9. Advertising Cookie Implementation</h2>
-            <div className="space-y-4 text-gray-300">
-              <p>
-                We have implemented Google AdSense to support our free service with privacy-friendly advertising.
-              </p>
-
-              <div className="bg-blue-900/20 border border-blue-700 rounded-lg p-6">
-                <h3 className="text-blue-300 font-semibold mb-4">📢 Current Advertising Cookies</h3>
-                <p className="text-blue-100 mb-3">
-                  With your explicit consent, we now use the following advertising cookies:
-                </p>
-                <div className="space-y-3">
-                  <div>
-                    <h4 className="font-medium text-white">Google AdSense Cookies</h4>
-                    <ul className="text-sm text-blue-100 space-y-1 mt-2">
-                      <li>• Contextual ad serving based on page content</li>
-                      <li>• Ad delivery and frequency management</li>
-                      <li>• Basic ad performance measurement (anonymized)</li>
-                      <li>• Fraud prevention and security</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-white">What We Still Don't Use</h4>
-                    <ul className="text-sm text-blue-100 space-y-1 mt-2">
-                      <li>• No behavioral tracking cookies</li>
-                      <li>• No cross-device tracking</li>
-                      <li>• No ad personalization based on user data</li>
-                      <li>• No remarketing or retargeting cookies</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-blue-900/20 border border-blue-700 rounded p-4 mt-4">
-                <p className="text-blue-100">
-                  <strong>Advance Notice Promise:</strong> Any introduction of advertising cookies will require:
-                  prominent user notification, explicit consent, detailed explanation of cookie usage,
-                  and easy opt-out options.
+              <div className="bg-green-900/20 border border-green-700 rounded p-4 mt-4">
+                <p className="text-green-100">
+                  <strong>Guarantee:</strong> When you use VidLoad.cc, you're only interacting with our service.
+                  No third-party cookies or tracking scripts are loaded.
                 </p>
               </div>
             </div>
@@ -364,7 +282,7 @@ export default function CookiesPage() {
 
           {/* Cookie Security */}
           <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4 text-blue-400">10. Cookie Security</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-blue-400">8. Cookie Security</h2>
             <div className="space-y-4 text-gray-300">
               <p>Our cookies follow security best practices:</p>
               <ul className="list-disc pl-6 space-y-2">
@@ -379,7 +297,7 @@ export default function CookiesPage() {
 
           {/* Updates to Cookie Policy */}
           <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4 text-blue-400">11. Updates to This Policy</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-blue-400">9. Updates to This Policy</h2>
             <div className="space-y-4 text-gray-300">
               <p>
                 We may update this Cookie Policy to reflect changes in our practices or legal requirements.
@@ -394,7 +312,7 @@ export default function CookiesPage() {
 
           {/* Contact */}
           <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4 text-blue-400">12. Questions About Cookies</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-blue-400">10. Questions About Cookies</h2>
             <div className="space-y-4 text-gray-300">
               <p>If you have questions about our cookie usage:</p>
               <ul className="list-disc pl-6 space-y-2">
