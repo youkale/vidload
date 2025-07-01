@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     images: [
       {
-        url: '/og-image.png',
+        url: '/logo.svg',
         width: 1200,
         height: 630,
         alt: 'VidLoad.cc - Privacy-First Video Analysis',
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     title: 'VidLoad.cc - Privacy-First Video Player & Analyzer',
     description: 'Universal video player and analyzer that respects your privacy. All processing happens locally in your browser.',
     creator: '@vidloadcc',
-    images: ['/og-image.png'],
+    images: ['/logo.svg'],
   },
   robots: {
     index: true,
@@ -68,6 +68,11 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://vidload.cc',
+    languages: {
+      'en': 'https://vidload.cc',
+      'zh': 'https://vidload.cc?lang=zh',
+      'ja': 'https://vidload.cc?lang=ja',
+    },
   },
   category: 'technology',
 };
@@ -80,6 +85,12 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Multilingual support */}
+        <link rel="alternate" hrefLang="en" href="https://vidload.cc" />
+        <link rel="alternate" hrefLang="zh" href="https://vidload.cc?lang=zh" />
+        <link rel="alternate" hrefLang="ja" href="https://vidload.cc?lang=ja" />
+        <link rel="alternate" hrefLang="x-default" href="https://vidload.cc" />
+
         {/* Google tag (gtag.js) */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-9JGWQHL4BJ"></script>
 

@@ -63,6 +63,13 @@ export async function GET(request: NextRequest) {
     <priority>0.9</priority>
     <mobile:mobile/>
   </url>
+  <url>
+    <loc>${baseUrl}/video-basics</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <mobile:mobile/>
+  </url>
 </urlset>`
 
   return new NextResponse(sitemap, {

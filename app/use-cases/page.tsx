@@ -1,12 +1,28 @@
-
-
 import React from 'react';
 import Link from 'next/link';
+import type { Metadata } from 'next';
+import Breadcrumb from '@/components/Breadcrumb';
+
+export const metadata: Metadata = {
+  title: 'VidLoad.cc Use Cases - Content Creators, Developers, Privacy-Conscious Users',
+  description: 'Discover how content creators, developers, and privacy-conscious users leverage VidLoad.cc for video analysis. Real-world scenarios and solutions for professional video processing.',
+  keywords: 'video analysis use cases, content creator tools, developer video tools, privacy video analysis, professional video processing, streaming quality testing, video optimization',
+  openGraph: {
+    title: 'VidLoad.cc Use Cases - Real-World Video Analysis Solutions',
+    description: 'Discover how professionals use VidLoad.cc for privacy-first video analysis.',
+    url: 'https://vidload.cc/use-cases',
+  },
+  alternates: {
+    canonical: 'https://vidload.cc/use-cases',
+  },
+};
 
 export default function UseCasesPage() {
   return (
     <main className="min-h-screen p-8 bg-gray-900 text-white">
       <div className="max-w-6xl mx-auto space-y-12">
+        <Breadcrumb items={[{ label: 'Use Cases' }]} />
+
         {/* Header */}
         <div className="text-center space-y-4">
           <Link href="/" className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors mb-4">

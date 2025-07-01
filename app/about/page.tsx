@@ -1,12 +1,28 @@
-'use client';
-
 import React from 'react';
 import Link from 'next/link';
+import type { Metadata } from 'next';
+import Breadcrumb from '@/components/Breadcrumb';
+
+export const metadata: Metadata = {
+  title: 'About VidLoad.cc - Privacy-First Video Analysis Platform',
+  description: 'Learn about VidLoad.cc, a cutting-edge privacy-first video analysis platform. Process videos locally in your browser with WebAssembly technology. GDPR compliant, no data upload required.',
+  keywords: 'about VidLoad.cc, privacy-first video platform, local video processing, WebAssembly video analysis, GDPR compliant video tool, browser-based video analysis',
+  openGraph: {
+    title: 'About VidLoad.cc - Privacy-First Video Analysis Platform',
+    description: 'Learn about our privacy-first approach to video analysis with local browser processing.',
+    url: 'https://vidload.cc/about',
+  },
+  alternates: {
+    canonical: 'https://vidload.cc/about',
+  },
+};
 
 export default function AboutPage() {
   return (
     <main className="min-h-screen p-8 bg-gray-900 text-white">
       <div className="max-w-6xl mx-auto space-y-12">
+        <Breadcrumb items={[{ label: 'About' }]} />
+
         {/* Header */}
         <div className="text-center space-y-4">
           <Link href="/" className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors mb-4">

@@ -1,11 +1,28 @@
-
 import React from 'react';
 import Link from 'next/link';
+import type { Metadata } from 'next';
+import Breadcrumb from '@/components/Breadcrumb';
+
+export const metadata: Metadata = {
+  title: 'Video Formats Guide - MP4, WebM, AVI, MKV, HLS Explained | VidLoad.cc',
+  description: 'Complete guide to video formats: MP4, WebM, AVI, MOV, MKV, HLS, DASH. Learn which format to use, compatibility, compression differences, and streaming protocols.',
+  keywords: 'video formats guide, MP4 vs WebM, video file types, HLS streaming format, video compression formats, video codecs explained, streaming protocols, video container formats',
+  openGraph: {
+    title: 'Video Formats Guide - Complete Format Comparison',
+    description: 'Complete guide to video formats and when to use each one.',
+    url: 'https://vidload.cc/video-formats',
+  },
+  alternates: {
+    canonical: 'https://vidload.cc/video-formats',
+  },
+};
 
 export default function VideoFormatsPage() {
   return (
     <main className="min-h-screen p-8 bg-gray-900 text-white">
       <div className="max-w-6xl mx-auto space-y-12">
+        <Breadcrumb items={[{ label: 'Video Formats Guide' }]} />
+
         {/* Header */}
         <div className="text-center space-y-4">
           <Link href="/" className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors mb-4">

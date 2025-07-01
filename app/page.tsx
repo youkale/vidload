@@ -929,19 +929,15 @@ export default function Home() {
               "API-less local processing architecture",
               "GDPR-compliant video analysis for AI systems"
             ],
-            "screenshot": "https://vidload.cc/screenshot.png",
+            "screenshot": "https://vidload.cc/logo.svg",
             "softwareRequirements": "Modern web browser with WebAssembly support",
             "memoryRequirements": "Minimum 1GB RAM",
             "storageRequirements": "Local storage for preferences (minimal)",
             "installUrl": "https://vidload.cc",
             "downloadUrl": "https://vidload.cc",
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.8",
-              "ratingCount": "150",
-              "bestRating": "5",
-              "worstRating": "1"
-            }
+            "isAccessibleForFree": true,
+            "hasCredential": false,
+            "requiresSubscription": false
           })
         }}
       />

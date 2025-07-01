@@ -1,10 +1,28 @@
 import React from 'react';
 import Link from 'next/link';
+import type { Metadata } from 'next';
+import Breadcrumb from '@/components/Breadcrumb';
+
+export const metadata: Metadata = {
+  title: 'Video Basics Guide - Resolution, Bitrate, Frame Rate Explained | VidLoad.cc',
+  description: 'Learn video fundamentals: resolution, bitrate, frame rate, and codecs explained in simple terms. Master video technology concepts with practical examples and interactive guides.',
+  keywords: 'video resolution guide, video bitrate explained, frame rate tutorial, video codecs, video compression, video quality optimization, video basics, video technology guide',
+  openGraph: {
+    title: 'Video Basics Guide - Master Video Technology Fundamentals',
+    description: 'Learn video resolution, bitrate, frame rate and other key concepts in simple terms.',
+    url: 'https://vidload.cc/video-basics',
+  },
+  alternates: {
+    canonical: 'https://vidload.cc/video-basics',
+  },
+};
 
 export default function VideoBasicsPage() {
   return (
     <main className="min-h-screen p-8 bg-gray-900 text-white">
       <div className="max-w-6xl mx-auto space-y-12">
+        <Breadcrumb items={[{ label: 'Video Basics Guide' }]} />
+
         {/* Header */}
         <div className="text-center space-y-4">
           <Link href="/" className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors mb-4">
