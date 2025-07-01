@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   metadataBase: new URL('https://vidload.cc'),
   title: 'VidLoad.cc - Privacy-First Universal Video Player & Analyzer',
-  description: 'VidLoad.cc is a cutting-edge, privacy-focused universal video player and analysis tool. Analyze video metadata, play HLS streams, and extract technical details - all locally in your browser with minimal data collection. GDPR compliant.',
+  description: 'Privacy-focused video player and analyzer. Analyze video metadata, play HLS streams locally in your browser. GDPR compliant, no data upload required.',
   keywords: 'video player, video analyzer, HLS player, M3U8 player, video metadata, FFmpeg online, privacy-first video tool, local video processing, GDPR compliant, video format analyzer',
   authors: [{ name: 'VidLoad.cc Team' }],
   creator: 'VidLoad.cc',

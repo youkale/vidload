@@ -959,7 +959,7 @@ export default function Home() {
                     </svg>
                   </div>
                 </div>
-                <h1 className="text-2xl font-bold text-white tracking-tight">VidLoad<span className="text-blue-400">.cc</span></h1>
+                <div className="text-2xl font-bold text-white tracking-tight">VidLoad<span className="text-blue-400">.cc</span></div>
               </div>
 
               {/* GitHub链接 */}
@@ -999,9 +999,9 @@ export default function Home() {
 
           {/* 简化的Hero区域 */}
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Privacy-First Video Analysis
-            </h2>
+            <h1 className="text-4xl font-bold text-white mb-4">
+              Privacy-First Video Player & Analyzer - VidLoad.cc
+            </h1>
             <p className="text-lg text-gray-400 mb-8">
               Analyze videos and HLS streams locally in your browser
             </p>
