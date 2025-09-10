@@ -32,7 +32,7 @@ export default function VideoBasicsPage() {
             Back to VidLoad.cc
           </Link>
           <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-            Video Basics Guide
+            Video Basics
           </h1>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto">
             Learn video resolution, bitrate, frame rate and other key concepts in simple terms. Master the fundamentals of video technology!

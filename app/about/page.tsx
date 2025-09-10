@@ -32,7 +32,7 @@ export default function AboutPage() {
             Back to VidLoad.cc
           </Link>
           <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-            About VidLoad.cc
+            About
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Privacy-First Video Analysis Platform

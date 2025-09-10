@@ -1021,10 +1021,10 @@ export default function Home() {
           {/* 简化的Hero区域 */}
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-white mb-4">
-              Privacy-First Video Player & Analyzer - VidLoad.cc
+              VidLoad.cc
             </h1>
             <p className="text-lg text-gray-400 mb-8">
-              Analyze videos and HLS streams locally in your browser
+              Privacy-first video player and analyzer. Analyze videos and HLS streams locally in your browser.
             </p>
           </div>
 
