@@ -596,6 +596,15 @@ function detectBrowserLanguage(): Language {
 
 export function getCurrentLanguage(): Language {
   if (typeof window !== 'undefined') {
+    // 首先检查URL参数
+    const urlParams = new URLSearchParams(window.location.search);
+    const urlLang = urlParams.get('lang') as Language;
+    if (urlLang && translations[urlLang]) {
+      currentLanguage = urlLang;
+      return currentLanguage;
+    }
+
+    // 然后检查localStorage
     const stored = localStorage.getItem('language') as Language;
     if (stored && translations[stored]) {
       currentLanguage = stored;

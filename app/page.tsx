@@ -245,10 +245,35 @@ export default function Home() {
     setLanguageState(currentLang);
   }, []);
 
+  // 监听URL变化以更新语言状态
+  useEffect(() => {
+    const handlePopState = () => {
+      const currentLang = getCurrentLanguage();
+      setLanguageState(currentLang);
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
   // 语言切换函数
   const handleLanguageChange = (newLang: Language) => {
     setLanguage(newLang);
     setLanguageState(newLang);
+
+    // 更新URL参数
+    const url = new URL(window.location.href);
+    if (newLang === 'en') {
+      // 如果是英语，移除lang参数（默认语言）
+      url.searchParams.delete('lang');
+    } else {
+      // 其他语言添加lang参数
+      url.searchParams.set('lang', newLang);
+    }
+
+    // 使用pushState更新URL而不重新加载页面
+    window.history.pushState({}, '', url.toString());
+
     // 强制重新渲染以更新所有文本
     window.location.reload();
   };
