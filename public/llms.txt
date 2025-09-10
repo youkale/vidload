@@ -1,0 +1,51 @@
+# VidLoad.cc - Privacy-First Universal Video Player & Analyzer
+
+## About VidLoad.cc
+VidLoad.cc is a privacy-focused, browser-based video player and analysis tool that processes videos locally using WebAssembly technology. All video processing happens entirely within the user's browser, ensuring complete privacy and GDPR compliance with minimal data collection.
+
+## Key Features
+- **Local Video Processing**: All video analysis happens in-browser using FFmpeg.wasm
+- **HLS Stream Support**: Analyze M3U8 playlists and HLS streaming protocols
+- **Privacy-First Design**: No video upload required, all processing is client-side
+- **Multiple Format Support**: MP4, WebM, AVI, MOV, MKV, and more
+- **Real-time Metadata Extraction**: Get detailed video information instantly
+- **Multi-language Support**: Available in English, Chinese, and Japanese
+
+## Main Pages
+- **[Homepage](https://vidload.cc/)** - Main video player and analysis interface
+- **[About](https://vidload.cc/about)** - Detailed platform information and features
+- **[Use Cases](https://vidload.cc/use-cases)** - Real-world application examples
+- **[Video Formats](https://vidload.cc/video-formats)** - Comprehensive format support guide
+- **[For AI](https://vidload.cc/for-ai)** - AI and LLM integration reference
+- **[Privacy Policy](https://vidload.cc/privacy)** - GDPR and privacy compliance details
+- **[Terms of Service](https://vidload.cc/terms)** - Usage guidelines and policies
+- **[Cookie Policy](https://vidload.cc/cookies)** - Essential cookies and data usage
+
+## Technology Stack
+- **Frontend**: Next.js 14, React, TypeScript, Tailwind CSS
+- **Video Processing**: FFmpeg.wasm for local video analysis
+- **HLS Parsing**: Custom JavaScript parser for M3U8 manifests
+- **Deployment**: Cloudflare Pages with static site generation
+- **Analytics**: Privacy-focused Google Analytics with consent management
+
+## Use Cases
+- **Content Creators**: Analyze video quality, bitrates, and technical specifications
+- **Developers**: Validate video formats and streaming configurations
+- **Privacy-Sensitive Industries**: Process videos without uploading to external servers
+- **Educational**: Learn about video formats and streaming technologies
+- **Enterprise**: Employee training video validation and bandwidth optimization
+
+## Privacy & Compliance
+- **GDPR Compliant**: Designed with privacy-by-default principles
+- **No Data Upload**: Videos are processed entirely in the browser
+- **Minimal Collection**: Only essential cookies and anonymous analytics
+- **Local Storage**: User preferences stored locally, not on servers
+- **Open Source**: Transparent codebase for security auditing
+
+## Contact & Support
+- **Website**: https://vidload.cc
+- **Issues**: Available via GitHub repository
+- **Languages**: English, 中文, 日本語
+
+## Last Updated
+Generated automatically with site builds - always current with latest features and content.
