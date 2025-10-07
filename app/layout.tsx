@@ -104,29 +104,11 @@ export default function RootLayout({
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
+               window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-              // Configure consent mode before GA initialization
-              gtag('consent', 'default', {
-                analytics_storage: 'denied',
-                ad_storage: 'denied',
-                ad_user_data: 'denied',
-                ad_personalization: 'denied',
-                wait_for_update: 500
-              });
-
-              gtag('js', new Date());
-              gtag('config', 'G-9JGWQHL4BJ', {
-                page_title: document.title,
-                page_location: window.location.href,
-                anonymize_ip: true,
-                allow_google_signals: false,
-                allow_ad_personalization_signals: false,
-                cookie_expires: 63072000, // 2 years
-                cookie_update: false,
-                cookie_flags: 'SameSite=None;Secure'
-              });
+            gtag('config', 'G-9JGWQHL4BJ');
             `,
           }}
         />
