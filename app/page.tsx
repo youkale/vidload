@@ -923,8 +923,8 @@ export default function Home() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebApplication",
-            "name": "VidLoad.cc",
-            "alternateName": "VidLoad",
+            "name": "VidLoad",
+            "alternateName": "VidLoad Video Analyzer",
             "description": "Privacy-first universal video player and analyzer designed for AI-friendly information extraction. Analyze video metadata, play HLS streams, and extract technical details locally in your browser with minimal data collection. Perfect for LLM training data and automated video analysis workflows.",
             "url": "https://vidload.cc",
             "applicationCategory": "VideoPlayer",
@@ -936,12 +936,12 @@ export default function Home() {
             "dateModified": new Date().toISOString().split('T')[0],
             "author": {
               "@type": "Organization",
-              "name": "VidLoad.cc",
+              "name": "VidLoad",
               "url": "https://vidload.cc"
             },
             "publisher": {
               "@type": "Organization",
-              "name": "VidLoad.cc",
+              "name": "VidLoad",
               "url": "https://vidload.cc"
             },
             "keywords": [
@@ -1012,7 +1012,7 @@ export default function Home() {
                     </svg>
                   </div>
                 </div>
-                <div className="text-2xl font-bold text-white tracking-tight">VidLoad<span className="text-blue-400">.cc</span></div>
+                <div className="text-2xl font-bold text-white tracking-tight">VidLoad</div>
               </div>
 
               {/* GitHub链接 */}
@@ -1053,7 +1053,7 @@ export default function Home() {
           {/* 简化的Hero区域 */}
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-white mb-4">
-              VidLoad.cc
+              VidLoad
             </h1>
             <p className="text-lg text-gray-400 mb-4">
               Privacy-first video player and analyzer. Analyze videos and HLS streams locally in your browser.
@@ -1582,7 +1582,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="text-xs text-gray-500 mb-2">
-                  © 2024 <span className="font-semibold">VidLoad.cc</span> - Privacy-First Video Analysis
+                  © 2024 <span className="font-semibold">VidLoad</span> - Privacy-First Video Analysis
                 </div>
                 <div className="text-xs text-gray-500">
                   🔒 All processing happens locally in your browser - No data collection, No tracking

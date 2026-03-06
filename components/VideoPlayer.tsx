@@ -485,8 +485,8 @@ const VideoPlayer: FC<VideoPlayerProps> = ({ url, onEnded, isLocalFile = false, 
       // 停止当前播放并重置video元素
       video.pause();
       video.currentTime = 0;
-      // 不要立即清空src，等到新的src设置后再清理
-      video.load(); // 重置video元素状态
+      // 不要在这里调用 video.load()，等到设置新 src 后再调用
+      // 这样可以避免出现空 src 的错误
 
       setIsLoading(true);
       setError(null);
