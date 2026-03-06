@@ -2,12 +2,21 @@
 
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import Link from 'next/link';
-import Head from 'next/head';
-import VideoPlayer from '@/components/VideoPlayer';
+import dynamic from 'next/dynamic';
 import AdSenseAd from '@/components/AdSenseAd';
-import { getVideoMetadata, type VideoMetadata } from '@/lib/ffmpeg';
-import { parseM3U8, type HLSStreamInfo, type HLSSegment, type HLSVariantPlaylist, formatBandwidth } from '@/lib/hls/parser';
+import { type VideoMetadata } from '@/lib/ffmpeg';
+import { type HLSStreamInfo, type HLSSegment, type HLSVariantPlaylist, formatBandwidth } from '@/lib/hls/parser';
 import { formatRelativeTime, Language, setLanguage, getCurrentLanguage, t, copyToClipboard, getLoadingMessageWithSize } from '@/lib/utils';
+
+// 动态导入 VideoPlayer，减少初始包大小
+const VideoPlayer = dynamic(() => import('@/components/VideoPlayer'), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full aspect-video bg-gray-800 rounded-lg flex items-center justify-center">
+      <div className="text-gray-400">Loading player...</div>
+    </div>
+  ),
+});
 
 // 添加一个类型转换函数
 function ensureString(value: string | null): string | null | undefined {
@@ -298,18 +307,20 @@ export default function Home() {
     setVideoHistory(storedHistory);
   }, []);
 
-  // 清理本地文件URL - 使用useCallback优化
-  const cleanupLocalFileUrls = useCallback(() => {
-    videoHistory.forEach((item: VideoHistoryItem) => {
-      if (item.isLocal && item.url) {
-        URL.revokeObjectURL(item.url);
-      }
-    });
-  }, [videoHistory]);
+  // 清理本地文件URL - 只在组件卸载时执行
+  const videoHistoryRef = useRef(videoHistory);
+  videoHistoryRef.current = videoHistory;
 
   useEffect(() => {
-    return cleanupLocalFileUrls;
-  }, [cleanupLocalFileUrls]);
+    return () => {
+      // 只在组件卸载时清理
+      videoHistoryRef.current.forEach((item: VideoHistoryItem) => {
+        if (item.isLocal && item.url) {
+          URL.revokeObjectURL(item.url);
+        }
+      });
+    };
+  }, []);
 
   // 监听历史记录变化，保存到localStorage - 使用useCallback优化
   const saveHistoryCallback = useCallback(() => {
@@ -418,6 +429,19 @@ export default function Home() {
     const file = e.target.files?.[0];
     if (!file) return;
 
+    // 检测是否为音频文件
+    const fileName = file.name.toLowerCase();
+    const audioExtensions = ['.mp3', '.aac', '.wav', '.flac', '.ogg', '.m4a', '.wma', '.aiff', '.ape', '.opus'];
+    const isAudioFile = audioExtensions.some(ext => fileName.endsWith(ext));
+    
+    if (isAudioFile) {
+      setError('Audio file detected! Please use the Audio Analyzer for audio files. Click "Try Audio Analyzer →" above.');
+      if (fileInputRef.current) {
+        fileInputRef.current.value = '';
+      }
+      return;
+    }
+
     // 先停止当前播放的视频
     stopCurrentVideo();
 
@@ -489,6 +513,8 @@ export default function Home() {
         // 后台获取元数据
         setTimeout(async () => {
           try {
+            // 动态导入 FFmpeg 函数
+            const { getVideoMetadata } = await import('@/lib/ffmpeg');
             const metadata = await getVideoMetadata(file);
             console.log('Video metadata:', metadata);
 
@@ -626,6 +652,8 @@ export default function Home() {
 
                 if (responseText.trim()) {
                   rawM3u8Content = responseText;
+                  // 动态导入 parseM3U8
+                  const { parseM3U8 } = await import('@/lib/hls/parser');
                   hlsInfo = await parseM3U8(inputUrl) as ExtendedHLSStreamInfo;
                 }
               } catch (error) {
@@ -635,6 +663,8 @@ export default function Home() {
               // 尝试为HLS流也获取视频元数据
               try {
                 console.log('Attempting to get metadata for HLS stream:', inputUrl);
+                // 动态导入 getVideoMetadata
+                const { getVideoMetadata } = await import('@/lib/ffmpeg');
                 metadata = await getVideoMetadata(inputUrl);
                 console.log('Successfully got HLS metadata:', metadata);
               } catch (metadataError) {
@@ -645,6 +675,8 @@ export default function Home() {
               // 如果是普通视频，获取元数据
               try {
                 console.log('Attempting to get metadata for:', inputUrl);
+                // 动态导入 getVideoMetadata
+                const { getVideoMetadata } = await import('@/lib/ffmpeg');
                 metadata = await getVideoMetadata(inputUrl);
                 console.log('Successfully got metadata:', metadata);
               } catch (metadataError) {
@@ -1023,9 +1055,18 @@ export default function Home() {
             <h1 className="text-4xl font-bold text-white mb-4">
               VidLoad.cc
             </h1>
-            <p className="text-lg text-gray-400 mb-8">
+            <p className="text-lg text-gray-400 mb-4">
               Privacy-first video player and analyzer. Analyze videos and HLS streams locally in your browser.
             </p>
+            <div className="flex items-center justify-center gap-2 text-sm">
+              <span className="text-gray-500">🎵 Need audio analysis?</span>
+              <Link
+                href="/audio"
+                className="text-blue-400 hover:text-blue-300 underline transition-colors"
+              >
+                Try Audio Analyzer →
+              </Link>
+            </div>
           </div>
 
           {/* 复制成功提示 */}

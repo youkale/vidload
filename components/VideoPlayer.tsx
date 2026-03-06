@@ -678,10 +678,8 @@ const VideoPlayer: FC<VideoPlayerProps> = ({ url, onEnded, isLocalFile = false, 
       // 停止视频播放并清理状态
       video.pause();
       video.currentTime = 0;
-      // 只在清理时清空src
-      if (video.src) {
-        video.src = '';
-      }
+      // 不要清空src，让新的URL直接覆盖旧的
+      // 这样可以避免在清理和重新初始化之间出现空src的错误
 
       // 移除所有事件监听器
       video.removeEventListener('error', handleVideoError);

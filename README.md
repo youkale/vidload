@@ -21,6 +21,14 @@ A powerful, privacy-first video player and analysis tool that processes everythi
 - **Streaming**: HLS (M3U8), DASH, Progressive HTTP
 - **Codecs**: H.264, H.265/HEVC, VP8, VP9, AV1, and more
 
+### 🎵 **NEW: Audio Support**
+- **Audio Formats**: MP3, AAC, WAV, FLAC, OGG, M4A, WMA, AIFF, APE, OPUS
+- **Audio Player**: Full-featured player with visualization
+- **ID3 Tags**: Extract metadata (title, artist, album, etc.)
+- **Audio Conversion**: Convert between formats with custom parameters
+- **Real-time Visualization**: Waveform, spectrum, and circular displays
+- **Album Art**: Display embedded album artwork
+
 ### 🔍 **Advanced Analysis**
 - **Real-time Metadata Extraction** using FFmpeg.wasm
 - **HLS Stream Analysis** with manifest parsing

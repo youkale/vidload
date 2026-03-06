@@ -176,7 +176,7 @@ export interface Translations {
 
 const translations: Record<Language, Translations> = {
   zh: {
-    appTitle: 'VidLoad.cc',
+    appTitle: 'VidLoad',
     videoPlayer: '视频播放器',
     selectLocalFile: '选择本地文件',
     playButton: '播放',
@@ -308,7 +308,7 @@ const translations: Record<Language, Translations> = {
     }
   },
   en: {
-    appTitle: 'VidLoad.cc',
+    appTitle: 'VidLoad',
     videoPlayer: 'Video Player',
     selectLocalFile: 'Select Local File',
     playButton: 'Play',
@@ -440,7 +440,7 @@ const translations: Record<Language, Translations> = {
     }
   },
   ja: {
-    appTitle: 'VidLoad.cc',
+    appTitle: 'VidLoad',
     videoPlayer: 'ビデオプレイヤー',
     selectLocalFile: 'ローカルファイルを選択',
     playButton: '再生',

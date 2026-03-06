@@ -2,12 +2,20 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  compress: true,
 
   // 静态导出配置
   output: process.env.EXPORT_STATIC === 'true' ? 'export' : undefined,
   trailingSlash: true,
   images: {
     unoptimized: process.env.EXPORT_STATIC === 'true',
+    formats: ['image/avif', 'image/webp'],
+  },
+
+  // 实验性功能
+  experimental: {
+    // 优化包导入
+    optimizePackageImports: ['@heroicons/react', 'hls.js'],
   },
 
   // 配置跨域资源
@@ -65,7 +73,11 @@ const nextConfig = {
           },
           {
             key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' blob: https://cdn.jsdelivr.net; worker-src 'self' blob: https://cdn.jsdelivr.net; media-src 'self' blob: https: http:; connect-src 'self' https: http: blob: https://cdn.jsdelivr.net; img-src 'self' blob: data: https: http:; object-src 'none';"
+            value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' blob: https://cdn.jsdelivr.net https://www.googletagmanager.com https://pagead2.googlesyndication.com https://www.clarity.ms; worker-src 'self' blob: https://cdn.jsdelivr.net; media-src 'self' blob: https: http:; connect-src 'self' https: http: blob: https://cdn.jsdelivr.net https://www.google-analytics.com; img-src 'self' blob: data: https: http:; object-src 'none';"
+          },
+          {
+            key: 'X-DNS-Prefetch-Control',
+            value: 'on'
           }
         ]
       }
@@ -82,6 +94,43 @@ const nextConfig = {
         tls: false,
         crypto: false,
         path: false,
+      };
+      
+      // 优化代码分割
+      config.optimization.splitChunks = {
+        chunks: 'all',
+        cacheGroups: {
+          default: false,
+          vendors: false,
+          // 将 React 相关库打包在一起
+          react: {
+            name: 'react',
+            chunks: 'all',
+            test: /[\\/]node_modules[\\/](react|react-dom|scheduler)[\\/]/,
+            priority: 20,
+          },
+          // 将 FFmpeg 单独打包
+          ffmpeg: {
+            name: 'ffmpeg',
+            chunks: 'all',
+            test: /[\\/]node_modules[\\/]@ffmpeg[\\/]/,
+            priority: 20,
+          },
+          // 将 HLS.js 单独打包
+          hls: {
+            name: 'hls',
+            chunks: 'all',
+            test: /[\\/]node_modules[\\/]hls\.js[\\/]/,
+            priority: 20,
+          },
+          // 其他第三方库
+          vendor: {
+            name: 'vendor',
+            chunks: 'all',
+            test: /[\\/]node_modules[\\/]/,
+            priority: 10,
+          },
+        },
       };
     }
 
