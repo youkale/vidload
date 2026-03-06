@@ -12,14 +12,14 @@ VidLoad.cc is a privacy-focused, browser-based video player and analysis tool th
 - **Multi-language Support**: Available in English, Chinese, and Japanese
 
 ## Main Pages
-- **[Homepage](https://vidload.cc/)** - Main video player and analysis interface
-- **[About](https://vidload.cc/about)** - Detailed platform information and features
-- **[Use Cases](https://vidload.cc/use-cases)** - Real-world application examples
-- **[Video Formats](https://vidload.cc/video-formats)** - Comprehensive format support guide
-- **[For AI](https://vidload.cc/for-ai)** - AI and LLM integration reference
-- **[Privacy Policy](https://vidload.cc/privacy)** - GDPR and privacy compliance details
-- **[Terms of Service](https://vidload.cc/terms)** - Usage guidelines and policies
-- **[Cookie Policy](https://vidload.cc/cookies)** - Essential cookies and data usage
+- **[Homepage](https://vidload.xyz/)** - Main video player and analysis interface
+- **[About](https://vidload.xyz/about)** - Detailed platform information and features
+- **[Use Cases](https://vidload.xyz/use-cases)** - Real-world application examples
+- **[Video Formats](https://vidload.xyz/video-formats)** - Comprehensive format support guide
+- **[For AI](https://vidload.xyz/for-ai)** - AI and LLM integration reference
+- **[Privacy Policy](https://vidload.xyz/privacy)** - GDPR and privacy compliance details
+- **[Terms of Service](https://vidload.xyz/terms)** - Usage guidelines and policies
+- **[Cookie Policy](https://vidload.xyz/cookies)** - Essential cookies and data usage
 
 ## Technology Stack
 - **Frontend**: Next.js 14, React, TypeScript, Tailwind CSS
@@ -43,7 +43,7 @@ VidLoad.cc is a privacy-focused, browser-based video player and analysis tool th
 - **Open Source**: Transparent codebase for security auditing
 
 ## Contact & Support
-- **Website**: https://vidload.cc
+- **Website**: https://vidload.xyz
 - **Issues**: Available via GitHub repository
 - **Languages**: English, 中文, 日本語
 

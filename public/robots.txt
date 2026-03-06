@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://vidload.cc/sitemap.xml
+Sitemap: https://vidload.xyz/sitemap.xml

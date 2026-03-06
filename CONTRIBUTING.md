@@ -224,7 +224,7 @@ Each release includes:
 **Do not** report security vulnerabilities through public GitHub issues.
 
 Instead:
-1. Email: security@vidload.cc
+1. Email: security@vidload.xyz
 2. Include detailed description
 3. Provide steps to reproduce
 4. Allow time for response before public disclosure

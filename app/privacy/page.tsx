@@ -324,7 +324,7 @@ export default function PrivacyPage() {
                 For questions about this Privacy Policy or our privacy practices:
               </p>
               <ul className="list-disc pl-6 space-y-2">
-                <li><strong>Website:</strong> <a href="https://vidload.cc" className="text-blue-400 hover:text-blue-300">https://vidload.cc</a></li>
+                <li><strong>Website:</strong> <a href="https://vidload.xyz" className="text-blue-400 hover:text-blue-300">https://vidload.xyz</a></li>
                 <li><strong>GitHub Issues:</strong> Report privacy concerns via our GitHub repository</li>
                 <li><strong>Open Source:</strong> Review our privacy implementation in our public code</li>
               </ul>

@@ -926,7 +926,7 @@ export default function Home() {
             "name": "VidLoad",
             "alternateName": "VidLoad Video Analyzer",
             "description": "Privacy-first universal video player and analyzer designed for AI-friendly information extraction. Analyze video metadata, play HLS streams, and extract technical details locally in your browser with minimal data collection. Perfect for LLM training data and automated video analysis workflows.",
-            "url": "https://vidload.cc",
+            "url": "https://vidload.xyz",
             "applicationCategory": "VideoPlayer",
             "applicationSubCategory": "Video Analysis Tool",
             "operatingSystem": "Any (Web Browser)",
@@ -937,12 +937,12 @@ export default function Home() {
             "author": {
               "@type": "Organization",
               "name": "VidLoad",
-              "url": "https://vidload.cc"
+              "url": "https://vidload.xyz"
             },
             "publisher": {
               "@type": "Organization",
               "name": "VidLoad",
-              "url": "https://vidload.cc"
+              "url": "https://vidload.xyz"
             },
             "keywords": [
               "video player",
@@ -986,12 +986,12 @@ export default function Home() {
               "API-less local processing architecture",
               "GDPR-compliant video analysis for AI systems"
             ],
-            "screenshot": "https://vidload.cc/logo.svg",
+            "screenshot": "https://vidload.xyz/logo.svg",
             "softwareRequirements": "Modern web browser with WebAssembly support",
             "memoryRequirements": "Minimum 1GB RAM",
             "storageRequirements": "Local storage for preferences (minimal)",
-            "installUrl": "https://vidload.cc",
-            "downloadUrl": "https://vidload.cc",
+            "installUrl": "https://vidload.xyz",
+            "downloadUrl": "https://vidload.xyz",
             "isAccessibleForFree": true,
             "hasCredential": false,
             "requiresSubscription": false

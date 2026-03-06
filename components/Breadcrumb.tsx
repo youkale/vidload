@@ -50,13 +50,13 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://vidload.cc"
+                "item": "https://vidload.xyz"
               },
               ...items.map((item, index) => ({
                 "@type": "ListItem",
                 "position": index + 2,
                 "name": item.label,
-                "item": item.href ? `https://vidload.cc${item.href}` : undefined
+                "item": item.href ? `https://vidload.xyz${item.href}` : undefined
               }))
             ]
           })

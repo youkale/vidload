@@ -10,10 +10,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'VidLoad.cc Use Cases - Real-World Video Analysis Solutions',
     description: 'Discover how professionals use VidLoad.cc for privacy-first video analysis.',
-    url: 'https://vidload.cc/use-cases',
+    url: 'https://vidload.xyz/use-cases',
   },
   alternates: {
-    canonical: 'https://vidload.cc/use-cases',
+    canonical: 'https://vidload.xyz/use-cases',
   },
 };
 

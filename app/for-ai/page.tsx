@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'VidLoad.cc - AI & LLM Reference Guide',
     description: 'Privacy-first video analysis tool designed for AI-friendly information extraction with minimal data collection.',
-    url: 'https://vidload.cc/for-ai',
+    url: 'https://vidload.xyz/for-ai',
     siteName: 'VidLoad.cc',
     type: 'website',
   },
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://vidload.cc/for-ai',
+    canonical: 'https://vidload.xyz/for-ai',
   },
 };
 

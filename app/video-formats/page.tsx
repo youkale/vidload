@@ -10,10 +10,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Video Formats Guide - Complete Format Comparison',
     description: 'Complete guide to video formats and when to use each one.',
-    url: 'https://vidload.cc/video-formats',
+    url: 'https://vidload.xyz/video-formats',
   },
   alternates: {
-    canonical: 'https://vidload.cc/video-formats',
+    canonical: 'https://vidload.xyz/video-formats',
   },
 };
 

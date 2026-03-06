@@ -12,7 +12,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://vidload.cc'),
+  metadataBase: new URL('https://vidload.xyz'),
   title: 'VidLoad - Privacy-First Universal Video Player & Analyzer',
   description: 'Privacy-focused video player and analyzer. Analyze video metadata, play HLS streams locally in your browser. GDPR compliant, no data upload required.',
   keywords: 'video player, video analyzer, HLS player, M3U8 player, video metadata, FFmpeg online, privacy-first video tool, local video processing, GDPR compliant, video format analyzer',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     title: 'VidLoad - Privacy-First Universal Video Player & Analyzer',
     description: 'Analyze videos and play HLS streams locally in your browser. Minimal data collection, GDPR compliant, open source.',
     type: 'website',
-    url: 'https://vidload.cc',
+    url: 'https://vidload.xyz',
     siteName: 'VidLoad',
     locale: 'en_US',
     images: [
@@ -73,11 +73,11 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://vidload.cc',
+    canonical: 'https://vidload.xyz',
     languages: {
-      'en': 'https://vidload.cc',
-      'zh': 'https://vidload.cc?lang=zh',
-      'ja': 'https://vidload.cc?lang=ja',
+      'en': 'https://vidload.xyz',
+      'zh': 'https://vidload.xyz?lang=zh',
+      'ja': 'https://vidload.xyz?lang=ja',
     },
   },
   category: 'technology',
@@ -98,10 +98,10 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         
         {/* Multilingual support */}
-        <link rel="alternate" hrefLang="en" href="https://vidload.cc" />
-        <link rel="alternate" hrefLang="zh" href="https://vidload.cc?lang=zh" />
-        <link rel="alternate" hrefLang="ja" href="https://vidload.cc?lang=ja" />
-        <link rel="alternate" hrefLang="x-default" href="https://vidload.cc" />
+        <link rel="alternate" hrefLang="en" href="https://vidload.xyz" />
+        <link rel="alternate" hrefLang="zh" href="https://vidload.xyz?lang=zh" />
+        <link rel="alternate" hrefLang="ja" href="https://vidload.xyz?lang=ja" />
+        <link rel="alternate" hrefLang="x-default" href="https://vidload.xyz" />
       </head>
       <body className={inter.className} suppressHydrationWarning>
         {children}

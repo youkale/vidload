@@ -10,10 +10,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'About VidLoad.cc - Privacy-First Video Analysis Platform',
     description: 'Learn about our privacy-first approach to video analysis with local browser processing.',
-    url: 'https://vidload.cc/about',
+    url: 'https://vidload.xyz/about',
   },
   alternates: {
-    canonical: 'https://vidload.cc/about',
+    canonical: 'https://vidload.xyz/about',
   },
 };
 
@@ -294,7 +294,7 @@ export default function AboutPage() {
                   <h3 className="font-semibold text-white mb-2">Follow Us</h3>
                   <ul className="text-gray-300 space-y-1">
                     <li>• GitHub: @youkale/vidload</li>
-                    <li>• Website: vidload.cc</li>
+                    <li>• Website: vidload.xyz</li>
                     <li>• Updates via our changelog</li>
                   </ul>
                 </div>

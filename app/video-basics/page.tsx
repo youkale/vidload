@@ -10,10 +10,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Video Basics Guide - Master Video Technology Fundamentals',
     description: 'Learn video resolution, bitrate, frame rate and other key concepts in simple terms.',
-    url: 'https://vidload.cc/video-basics',
+    url: 'https://vidload.xyz/video-basics',
   },
   alternates: {
-    canonical: 'https://vidload.cc/video-basics',
+    canonical: 'https://vidload.xyz/video-basics',
   },
 };
 

@@ -12,7 +12,7 @@
     "ffmpeg",
     "webassembly"
   ],
-  "homepage": "https://vidload.cc",
+  "homepage": "https://vidload.xyz",
   "repository": {
     "type": "git",
     "url": "https://github.com/youkale/vidload"
@@ -23,7 +23,7 @@
   "license": "MIT",
   "author": {
     "name": "VidLoad.cc",
-    "url": "https://vidload.cc"
+    "url": "https://vidload.xyz"
   },
   "private": false,
   "scripts": {

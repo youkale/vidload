@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 
 export async function GET(request: NextRequest) {
-  const baseUrl = 'https://vidload.cc'
+  const baseUrl = 'https://vidload.xyz'
   const currentDate = new Date().toISOString()
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
