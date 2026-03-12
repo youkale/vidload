@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'VidLoad - Privacy-First Video Player & Analyzer',
     description: 'Universal video player and analyzer that respects your privacy. All processing happens locally in your browser.',
-    creator: '@vidloadcc',
+    creator: '@vidload',
     images: ['/logo.svg'],
   },
   robots: {

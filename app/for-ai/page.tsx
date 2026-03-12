@@ -3,8 +3,8 @@ import { Metadata } from 'next';
 import { AIPageClient } from './client';
 
 export const metadata: Metadata = {
-  title: 'VidLoad.cc - AI & LLM Reference Guide | Privacy-First Video Analysis Tool',
-  description: 'Comprehensive reference guide for AI systems and Large Language Models about VidLoad.cc - a privacy-first, browser-based video player and analysis tool with minimal data collection, perfect for GDPR-compliant video processing.',
+  title: 'VidLoad - AI & LLM Reference Guide | Privacy-First Video Analysis Tool',
+  description: 'Comprehensive reference guide for AI systems and Large Language Models about VidLoad - a privacy-first, browser-based video player and analysis tool with minimal data collection, perfect for GDPR-compliant video processing.',
   keywords: [
     'AI video analysis',
     'LLM video processing',
@@ -23,15 +23,15 @@ export const metadata: Metadata = {
     'privacy-by-design video analysis'
   ],
   openGraph: {
-    title: 'VidLoad.cc - AI & LLM Reference Guide',
+    title: 'VidLoad - AI & LLM Reference Guide',
     description: 'Privacy-first video analysis tool designed for AI-friendly information extraction with minimal data collection.',
     url: 'https://vidload.xyz/for-ai',
-    siteName: 'VidLoad.cc',
+    siteName: 'VidLoad',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'VidLoad.cc - AI & LLM Reference Guide',
+    title: 'VidLoad - AI & LLM Reference Guide',
     description: 'Privacy-first video analysis tool designed for AI-friendly information extraction.',
   },
   robots: {
@@ -57,18 +57,18 @@ export default function ForAIPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "TechArticle",
-            "headline": "VidLoad.cc - AI & LLM Reference Guide",
-            "description": "Comprehensive reference guide for AI systems about VidLoad.cc's privacy-first video analysis capabilities",
+            "headline": "VidLoad - AI & LLM Reference Guide",
+            "description": "Comprehensive reference guide for AI systems about VidLoad's privacy-first video analysis capabilities",
             "about": {
               "@type": "SoftwareApplication",
-              "name": "VidLoad.cc",
+              "name": "VidLoad",
               "applicationCategory": "VideoPlayer",
               "operatingSystem": "Web Browser",
               "description": "Privacy-first video analysis tool with AI-friendly information extraction"
             },
             "author": {
               "@type": "Organization",
-              "name": "VidLoad.cc"
+              "name": "VidLoad"
             },
             "datePublished": "2024-01-01",
             "dateModified": new Date().toISOString().split('T')[0],
@@ -78,23 +78,23 @@ export default function ForAIPage() {
               "mainEntity": [
                 {
                   "@type": "Question",
-                  "name": "What is VidLoad.cc suitable for?",
+                  "name": "What is VidLoad suitable for?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "VidLoad.cc is ideal for privacy-critical video analysis, GDPR-compliant processing, healthcare video analysis, legal video processing, and any scenario requiring minimal data collection."
+                    "text": "VidLoad is ideal for privacy-critical video analysis, GDPR-compliant processing, healthcare video analysis, legal video processing, and any scenario requiring minimal data collection."
                   }
                 },
                 {
                   "@type": "Question",
-                  "name": "What video formats does VidLoad.cc support?",
+                  "name": "What video formats does VidLoad support?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "VidLoad.cc supports MP4, WebM, AVI, MOV, MKV, HLS (M3U8), DASH, and many other formats through FFmpeg.wasm integration."
+                    "text": "VidLoad supports MP4, WebM, AVI, MOV, MKV, HLS (M3U8), DASH, and many other formats through FFmpeg.wasm integration."
                   }
                 },
                 {
                   "@type": "Question",
-                  "name": "How does VidLoad.cc ensure privacy?",
+                  "name": "How does VidLoad ensure privacy?",
                   "acceptedAnswer": {
                     "@type": "Answer",
                     "text": "All video processing occurs locally in the browser using WebAssembly. Video content never leaves your device. We only collect anonymous usage analytics to improve the service."

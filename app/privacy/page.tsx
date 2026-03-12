@@ -13,7 +13,7 @@ export default function PrivacyPage() {
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
-            Back to VidLoad.cc
+            Back to VidLoad
           </Link>
           <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
             Privacy Policy
@@ -31,7 +31,7 @@ export default function PrivacyPage() {
         <div className="bg-blue-900/20 border border-blue-700 rounded-lg p-6 mb-8">
           <h2 className="text-blue-400 text-xl font-semibold mb-3">🔒 Our Privacy Promise</h2>
           <p className="text-blue-100 text-lg">
-            <strong>VidLoad.cc minimizes data collection.</strong> All video processing happens locally in your browser.
+            <strong>VidLoad minimizes data collection.</strong> All video processing happens locally in your browser.
             We only collect anonymous usage analytics to improve the service - no personal data or video content.
           </p>
         </div>
@@ -42,11 +42,11 @@ export default function PrivacyPage() {
             <h2 className="text-2xl font-semibold mb-4 text-blue-400">1. Introduction</h2>
             <div className="space-y-4 text-gray-300">
               <p>
-                VidLoad.cc ("we," "our," or "us") operates the VidLoad.cc website (the "Service").
+                VidLoad ("we," "our," or "us") operates the VidLoad website (the "Service").
                 This Privacy Policy explains how we handle information when you use our Service.
               </p>
               <p>
-                <strong>Key Point:</strong> Unlike most online services, VidLoad.cc is designed to operate
+                <strong>Key Point:</strong> Unlike most online services, VidLoad is designed to operate
                 without collecting any personal data. All video processing occurs locally in your browser
                 using WebAssembly technology.
               </p>
@@ -57,7 +57,7 @@ export default function PrivacyPage() {
           <section className="mb-10">
             <h2 className="text-2xl font-semibold mb-4 text-blue-400">2. Information We Collect</h2>
             <div className="space-y-4 text-gray-300">
-              <p>VidLoad.cc is designed with privacy-by-design principles. We collect <strong>minimal anonymous data</strong>:</p>
+              <p>VidLoad is designed with privacy-by-design principles. We collect <strong>minimal anonymous data</strong>:</p>
 
               <h3 className="text-lg font-semibold text-white">What We Collect</h3>
               <ul className="list-disc pl-6 space-y-2">
@@ -228,7 +228,7 @@ export default function PrivacyPage() {
             <h2 className="text-2xl font-semibold mb-4 text-blue-400">9. International Users</h2>
             <div className="space-y-4 text-gray-300">
               <p>
-                VidLoad.cc operates with a global privacy-first approach. Since no personal data
+                VidLoad operates with a global privacy-first approach. Since no personal data
                 is collected or processed, international data transfer regulations do not apply.
               </p>
               <ul className="list-disc pl-6 space-y-2">
@@ -343,7 +343,7 @@ export default function PrivacyPage() {
         <div className="mt-12 pt-8 border-t border-gray-700">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-gray-400">
-              © 2024 VidLoad.cc - Privacy-First Video Analysis
+              © 2024 VidLoad - Privacy-First Video Analysis
             </div>
             <div className="flex gap-6">
               <Link href="/terms" className="text-gray-400 hover:text-white transition-colors">

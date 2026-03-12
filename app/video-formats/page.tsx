@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'Video Formats Guide - MP4, WebM, AVI, MKV, HLS Explained | VidLoad.cc',
+  title: 'Video Formats Guide - MP4, WebM, AVI, MKV, HLS Explained | VidLoad',
   description: 'Complete guide to video formats: MP4, WebM, AVI, MOV, MKV, HLS, DASH. Learn which format to use, compatibility, compression differences, and streaming protocols.',
   keywords: 'video formats guide, MP4 vs WebM, video file types, HLS streaming format, video compression formats, video codecs explained, streaming protocols, video container formats',
   openGraph: {
@@ -29,13 +29,13 @@ export default function VideoFormatsPage() {
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
-            Back to VidLoad.cc
+            Back to VidLoad
           </Link>
           <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
             Video Formats Guide
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Comprehensive guide to video formats supported by VidLoad.cc and the technical relationships
+            Comprehensive guide to video formats supported by VidLoad and the technical relationships
             between resolution, bitrate, and frame rate.
           </p>
         </div>
@@ -459,7 +459,7 @@ export default function VideoFormatsPage() {
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
-            Return to VidLoad.cc
+            Return to VidLoad
           </Link>
         </div>
       </div>

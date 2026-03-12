@@ -183,7 +183,7 @@ const translations: Record<Language, Translations> = {
     loading: '加载中...',
     playing: '播放中',
 
-    placeholderTitle: 'VidLoad.cc - 隐私优先的视频分析工具',
+    placeholderTitle: 'VidLoad - 隐私优先的视频分析工具',
     placeholderDescription: '添加视频URL开始播放，或选择本地文件',
     onlineVideo: '在线视频',
     hlsStream: 'HLS流',
@@ -315,7 +315,7 @@ const translations: Record<Language, Translations> = {
     loading: 'Loading...',
     playing: 'Playing',
 
-    placeholderTitle: 'VidLoad.cc - Privacy-First Video Analysis Tool',
+    placeholderTitle: 'VidLoad - Privacy-First Video Analysis Tool',
     placeholderDescription: 'Add video URL to start playing, or select local file',
     onlineVideo: 'Online Video',
     hlsStream: 'HLS Stream',
@@ -447,7 +447,7 @@ const translations: Record<Language, Translations> = {
     loading: '読み込み中...',
     playing: '再生中',
 
-    placeholderTitle: 'VidLoad.cc - プライバシー重視の動画解析ツール',
+    placeholderTitle: 'VidLoad - プライバシー重視の動画解析ツール',
     placeholderDescription: 'ビデオURLを追加して再生を開始するか、ローカルファイルを選択してください',
     onlineVideo: 'オンラインビデオ',
     hlsStream: 'HLSストリーム',

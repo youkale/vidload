@@ -143,7 +143,7 @@ export default function AudioPage() {
   return (
     <>
       <Head>
-        <title>Audio Analyzer - VidLoad.cc</title>
+        <title>Audio Analyzer - VidLoad</title>
         <meta name="description" content="Analyze and play audio files with advanced visualization and conversion features" />
       </Head>
 

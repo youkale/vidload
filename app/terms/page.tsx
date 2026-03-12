@@ -13,7 +13,7 @@ export default function TermsPage() {
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
-            Back to VidLoad.cc
+            Back to VidLoad
           </Link>
           <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
             Terms of Service
@@ -31,7 +31,7 @@ export default function TermsPage() {
         <div className="bg-blue-900/20 border border-blue-700 rounded-lg p-6 mb-8">
           <h2 className="text-blue-400 text-xl font-semibold mb-3">📋 Terms Summary</h2>
           <p className="text-blue-100 text-lg">
-            VidLoad.cc is a <strong>free, open-source service</strong> provided "as-is."
+            VidLoad is a <strong>free, open-source service</strong> provided "as-is."
             Use it responsibly and respect copyright laws.
           </p>
         </div>
@@ -42,11 +42,11 @@ export default function TermsPage() {
             <h2 className="text-2xl font-semibold mb-4 text-blue-400">1. Acceptance of Terms</h2>
             <div className="space-y-4 text-gray-300">
               <p>
-                By accessing and using VidLoad.cc (the "Service"), you accept and agree to be bound by
+                By accessing and using VidLoad (the "Service"), you accept and agree to be bound by
                 the terms and provision of this agreement.
               </p>
               <p>
-                <strong>Key Principle:</strong> VidLoad.cc is designed as a privacy-first, client-side
+                <strong>Key Principle:</strong> VidLoad is designed as a privacy-first, client-side
                 video analysis tool. All processing occurs locally in your browser.
               </p>
             </div>
@@ -56,7 +56,7 @@ export default function TermsPage() {
           <section className="mb-10">
             <h2 className="text-2xl font-semibold mb-4 text-blue-400">2. Service Description</h2>
             <div className="space-y-4 text-gray-300">
-              <p>VidLoad.cc provides:</p>
+              <p>VidLoad provides:</p>
               <ul className="list-disc pl-6 space-y-2">
                 <li><strong>Video Player:</strong> Browser-based video playback for various formats</li>
                 <li><strong>Video Analysis:</strong> Client-side metadata extraction using FFmpeg.wasm</li>
@@ -66,7 +66,7 @@ export default function TermsPage() {
 
               <div className="bg-green-900/20 border border-green-700 rounded p-4 mt-4">
                 <p className="text-green-100">
-                  <strong>No Account Required:</strong> VidLoad.cc operates without user registration,
+                  <strong>No Account Required:</strong> VidLoad operates without user registration,
                   data collection, or server-side processing of your content.
                 </p>
               </div>
@@ -87,7 +87,7 @@ export default function TermsPage() {
               </ul>
 
               <h3 className="text-lg font-semibold text-white mt-6">Prohibited Uses</h3>
-              <p>You agree not to use VidLoad.cc for:</p>
+              <p>You agree not to use VidLoad for:</p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Processing copyrighted content without permission</li>
                 <li>Analyzing content that violates applicable laws</li>
@@ -102,7 +102,7 @@ export default function TermsPage() {
           <section className="mb-10">
             <h2 className="text-2xl font-semibold mb-4 text-blue-400">4. Free Service Provision</h2>
             <div className="space-y-4 text-gray-300">
-              <p>VidLoad.cc is provided as a free service:</p>
+              <p>VidLoad is provided as a free service:</p>
               <ul className="list-disc pl-6 space-y-2">
                 <li><strong>No Fees:</strong> No subscription, usage, or hidden fees</li>
                 <li><strong>No Advertising:</strong> No ads or sponsored content</li>
@@ -123,7 +123,7 @@ export default function TermsPage() {
           <section className="mb-10">
             <h2 className="text-2xl font-semibold mb-4 text-blue-400">5. Privacy and Data Handling</h2>
             <div className="space-y-4 text-gray-300">
-              <p>VidLoad.cc operates with privacy-by-design principles:</p>
+              <p>VidLoad operates with privacy-by-design principles:</p>
               <ul className="list-disc pl-6 space-y-2">
                 <li><strong>No Data Collection:</strong> We do not collect, store, or process personal data</li>
                 <li><strong>Local Processing:</strong> All video analysis occurs in your browser</li>
@@ -141,11 +141,11 @@ export default function TermsPage() {
           <section className="mb-10">
             <h2 className="text-2xl font-semibold mb-4 text-blue-400">6. Intellectual Property</h2>
             <div className="space-y-4 text-gray-300">
-              <h3 className="text-lg font-semibold text-white">VidLoad.cc Service</h3>
+              <h3 className="text-lg font-semibold text-white">VidLoad Service</h3>
               <ul className="list-disc pl-6 space-y-2">
-                <li><strong>Open Source:</strong> VidLoad.cc source code is available under MIT License</li>
+                <li><strong>Open Source:</strong> VidLoad source code is available under MIT License</li>
                 <li><strong>Third-party Libraries:</strong> We use open-source libraries (FFmpeg.wasm, HLS.js, etc.)</li>
-                <li><strong>Brand Name:</strong> "VidLoad.cc" name and branding remain our property</li>
+                <li><strong>Brand Name:</strong> "VidLoad" name and branding remain our property</li>
               </ul>
 
               <h3 className="text-lg font-semibold text-white mt-6">User Content</h3>
@@ -162,7 +162,7 @@ export default function TermsPage() {
             <h2 className="text-2xl font-semibold mb-4 text-blue-400">7. Disclaimers and Limitations</h2>
             <div className="space-y-4 text-gray-300">
               <h3 className="text-lg font-semibold text-white">Service "As-Is"</h3>
-              <p>VidLoad.cc is provided "AS-IS" without warranties of any kind:</p>
+              <p>VidLoad is provided "AS-IS" without warranties of any kind:</p>
               <ul className="list-disc pl-6 space-y-2">
                 <li><strong>No Accuracy Guarantee:</strong> Video analysis results may not be 100% accurate</li>
                 <li><strong>No Compatibility Guarantee:</strong> May not work with all video formats or browsers</li>
@@ -173,7 +173,7 @@ export default function TermsPage() {
               <h3 className="text-lg font-semibold text-white mt-6">Limitation of Liability</h3>
               <div className="bg-red-900/20 border border-red-700 rounded p-4">
                 <p className="text-red-100">
-                  <strong>Important:</strong> VidLoad.cc and its creators are not liable for any damages,
+                  <strong>Important:</strong> VidLoad and its creators are not liable for any damages,
                   data loss, or issues arising from use of this free service. Use at your own risk.
                 </p>
               </div>
@@ -184,7 +184,7 @@ export default function TermsPage() {
           <section className="mb-10">
             <h2 className="text-2xl font-semibold mb-4 text-blue-400">8. Technical Requirements</h2>
             <div className="space-y-4 text-gray-300">
-              <p>VidLoad.cc requires:</p>
+              <p>VidLoad requires:</p>
               <ul className="list-disc pl-6 space-y-2">
                 <li><strong>Modern Browser:</strong> Chrome 90+, Firefox 88+, Safari 14+, or Edge 90+</li>
                 <li><strong>JavaScript Enabled:</strong> Required for all functionality</li>
@@ -204,7 +204,7 @@ export default function TermsPage() {
             <h2 className="text-2xl font-semibold mb-4 text-blue-400">9. Third-party Content and Links</h2>
             <div className="space-y-4 text-gray-300">
               <p>
-                VidLoad.cc may process videos from external URLs provided by users:
+                VidLoad may process videos from external URLs provided by users:
               </p>
               <ul className="list-disc pl-6 space-y-2">
                 <li><strong>Direct Access:</strong> Your browser directly accesses external URLs</li>
@@ -219,7 +219,7 @@ export default function TermsPage() {
           <section className="mb-10">
             <h2 className="text-2xl font-semibold mb-4 text-blue-400">10. Open Source and Community</h2>
             <div className="space-y-4 text-gray-300">
-              <p>VidLoad.cc embraces open source principles:</p>
+              <p>VidLoad embraces open source principles:</p>
               <ul className="list-disc pl-6 space-y-2">
                 <li><strong>MIT License:</strong> Source code available under permissive open source license</li>
                 <li><strong>Community Contributions:</strong> We welcome bug reports and improvements</li>
@@ -290,7 +290,7 @@ export default function TermsPage() {
             <h2 className="text-2xl font-semibold mb-4 text-blue-400">14. Governing Law</h2>
             <div className="space-y-4 text-gray-300">
               <p>
-                These terms are governed by applicable laws. Since VidLoad.cc processes no personal
+                These terms are governed by applicable laws. Since VidLoad processes no personal
                 data and operates client-side, jurisdictional issues are minimal.
               </p>
               <p>
@@ -304,7 +304,7 @@ export default function TermsPage() {
         <div className="mt-12 pt-8 border-t border-gray-700">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-gray-400">
-              © 2024 VidLoad.cc - Privacy-First Video Analysis
+              © 2024 VidLoad - Privacy-First Video Analysis
             </div>
             <div className="flex gap-6">
               <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">

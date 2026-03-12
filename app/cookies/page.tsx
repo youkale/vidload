@@ -13,7 +13,7 @@ export default function CookiesPage() {
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
-            Back to VidLoad.cc
+            Back to VidLoad
           </Link>
           <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
             Cookie Policy
@@ -31,7 +31,7 @@ export default function CookiesPage() {
         <div className="bg-green-900/20 border border-green-700 rounded-lg p-6 mb-8">
           <h2 className="text-green-400 text-xl font-semibold mb-3">🍪 Our Cookie Promise</h2>
           <p className="text-green-100 text-lg">
-            VidLoad.cc uses <strong>minimal essential cookies only</strong>. No tracking, no advertising,
+            VidLoad uses <strong>minimal essential cookies only</strong>. No tracking, no advertising,
             no third-party cookies - just basic functionality cookies.
           </p>
         </div>
@@ -46,7 +46,7 @@ export default function CookiesPage() {
                 They help websites remember information about your visit and preferences.
               </p>
               <p>
-                <strong>VidLoad.cc Philosophy:</strong> We believe in minimal cookie usage. Unlike most
+                <strong>VidLoad Philosophy:</strong> We believe in minimal cookie usage. Unlike most
                 websites, we don't use cookies for tracking, advertising, or analytics.
               </p>
             </div>
@@ -89,7 +89,7 @@ export default function CookiesPage() {
           <section className="mb-10">
             <h2 className="text-2xl font-semibold mb-4 text-blue-400">3. Cookies We DON'T Use</h2>
             <div className="space-y-4 text-gray-300">
-              <p>VidLoad.cc explicitly <strong>does not use</strong> the following types of cookies:</p>
+              <p>VidLoad explicitly <strong>does not use</strong> the following types of cookies:</p>
 
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-red-900/20 border border-red-700 rounded-lg p-4">
@@ -140,7 +140,7 @@ export default function CookiesPage() {
             <h2 className="text-2xl font-semibold mb-4 text-blue-400">4. Local Storage (Not Cookies)</h2>
             <div className="space-y-4 text-gray-300">
               <p>
-                In addition to minimal cookies, VidLoad.cc uses browser Local Storage for enhanced functionality.
+                In addition to minimal cookies, VidLoad uses browser Local Storage for enhanced functionality.
                 <strong>This data never leaves your device.</strong>
               </p>
 
@@ -243,7 +243,7 @@ export default function CookiesPage() {
               <div className="bg-yellow-900/20 border border-yellow-700 rounded p-4 mt-6">
                 <h4 className="font-semibold text-yellow-300 mb-2">Impact of Disabling Cookies</h4>
                 <p className="text-yellow-100 text-sm">
-                  If you disable all cookies, VidLoad.cc will still work, but you may lose:
+                  If you disable all cookies, VidLoad will still work, but you may lose:
                 </p>
                 <ul className="text-yellow-100 text-sm mt-2 space-y-1">
                   <li>• Language preference (will default to browser language)</li>
@@ -261,7 +261,7 @@ export default function CookiesPage() {
           <section className="mb-10">
             <h2 className="text-2xl font-semibold mb-4 text-blue-400">7. Third-party Services</h2>
             <div className="space-y-4 text-gray-300">
-              <p>VidLoad.cc has a strict no third-party policy:</p>
+              <p>VidLoad has a strict no third-party policy:</p>
               <ul className="list-disc pl-6 space-y-2">
                 <li><strong>No External Analytics:</strong> No Google Analytics, Mixpanel, or similar services</li>
                 <li><strong>No Social Media Integration:</strong> No Facebook, Twitter, or social tracking</li>
@@ -272,7 +272,7 @@ export default function CookiesPage() {
 
               <div className="bg-green-900/20 border border-green-700 rounded p-4 mt-4">
                 <p className="text-green-100">
-                  <strong>Guarantee:</strong> When you use VidLoad.cc, you're only interacting with our service.
+                  <strong>Guarantee:</strong> When you use VidLoad, you're only interacting with our service.
                   No third-party cookies or tracking scripts are loaded.
                 </p>
               </div>
@@ -335,7 +335,7 @@ export default function CookiesPage() {
         <div className="mt-12 pt-8 border-t border-gray-700">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-gray-400">
-              © 2024 VidLoad.cc - Privacy-First Video Analysis
+              © 2024 VidLoad - Privacy-First Video Analysis
             </div>
             <div className="flex gap-6">
               <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">

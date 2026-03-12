@@ -4,12 +4,12 @@ import type { Metadata } from 'next';
 import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'VidLoad.cc Use Cases - Content Creators, Developers, Privacy-Conscious Users',
-  description: 'Discover how content creators, developers, and privacy-conscious users leverage VidLoad.cc for video analysis. Real-world scenarios and solutions for professional video processing.',
+  title: 'VidLoad Use Cases - Content Creators, Developers, Privacy-Conscious Users',
+  description: 'Discover how content creators, developers, and privacy-conscious users leverage VidLoad for video analysis. Real-world scenarios and solutions for professional video processing.',
   keywords: 'video analysis use cases, content creator tools, developer video tools, privacy video analysis, professional video processing, streaming quality testing, video optimization',
   openGraph: {
-    title: 'VidLoad.cc Use Cases - Real-World Video Analysis Solutions',
-    description: 'Discover how professionals use VidLoad.cc for privacy-first video analysis.',
+    title: 'VidLoad Use Cases - Real-World Video Analysis Solutions',
+    description: 'Discover how professionals use VidLoad for privacy-first video analysis.',
     url: 'https://vidload.xyz/use-cases',
   },
   alternates: {
@@ -29,13 +29,13 @@ export default function UseCasesPage() {
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
-            Back to VidLoad.cc
+            Back to VidLoad
           </Link>
           <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
             Use Cases
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover how different professionals and users leverage VidLoad.cc's privacy-first video analysis and playback capabilities.
+            Discover how different professionals and users leverage VidLoad's privacy-first video analysis and playback capabilities.
           </p>
         </div>
 
@@ -54,7 +54,7 @@ export default function UseCasesPage() {
                   </p>
                 </div>
                 <div>
-                  <h4 className="font-medium text-white mb-2">VidLoad.cc Solution:</h4>
+                  <h4 className="font-medium text-white mb-2">VidLoad Solution:</h4>
                   <ul className="text-sm text-gray-300 space-y-1">
                     <li>✓ Analyze codec compatibility (H.264/H.265)</li>
                     <li>✓ Check resolution and bitrate settings</li>
@@ -81,7 +81,7 @@ export default function UseCasesPage() {
                   </p>
                 </div>
                 <div>
-                  <h4 className="font-medium text-white mb-2">VidLoad.cc Solution:</h4>
+                  <h4 className="font-medium text-white mb-2">VidLoad Solution:</h4>
                   <ul className="text-sm text-gray-300 space-y-1">
                     <li>✓ Compare different resolution outputs</li>
                     <li>✓ Analyze compression efficiency</li>
@@ -108,7 +108,7 @@ export default function UseCasesPage() {
                   </p>
                 </div>
                 <div>
-                  <h4 className="font-medium text-white mb-2">VidLoad.cc Solution:</h4>
+                  <h4 className="font-medium text-white mb-2">VidLoad Solution:</h4>
                   <ul className="text-sm text-gray-300 space-y-1">
                     <li>✓ Analyze HLS manifest structure</li>
                     <li>✓ Monitor adaptive bitrate switching</li>
@@ -135,7 +135,7 @@ export default function UseCasesPage() {
                   </p>
                 </div>
                 <div>
-                  <h4 className="font-medium text-white mb-2">VidLoad.cc Solution:</h4>
+                  <h4 className="font-medium text-white mb-2">VidLoad Solution:</h4>
                   <ul className="text-sm text-gray-300 space-y-1">
                     <li>✓ Extract detailed technical metadata</li>
                     <li>✓ Assess color space and bit depth</li>
@@ -169,7 +169,7 @@ export default function UseCasesPage() {
                   </p>
                 </div>
                 <div>
-                  <h4 className="font-medium text-white mb-2">VidLoad.cc Solution:</h4>
+                  <h4 className="font-medium text-white mb-2">VidLoad Solution:</h4>
                   <ul className="text-sm text-gray-300 space-y-1">
                     <li>✓ Test HLS streams without backend setup</li>
                     <li>✓ Debug manifest parsing issues</li>
@@ -196,7 +196,7 @@ export default function UseCasesPage() {
                   </p>
                 </div>
                 <div>
-                  <h4 className="font-medium text-white mb-2">VidLoad.cc Solution:</h4>
+                  <h4 className="font-medium text-white mb-2">VidLoad Solution:</h4>
                   <ul className="text-sm text-gray-300 space-y-1">
                     <li>✓ Monitor connection speeds and latency</li>
                     <li>✓ Analyze segment download patterns</li>
@@ -334,7 +334,7 @@ export default function UseCasesPage() {
         <section className="text-center space-y-6 py-12">
           <h2 className="text-3xl font-bold">Ready to Experience Privacy-First Video Analysis?</h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Join thousands of content creators, developers, and privacy-conscious users who trust VidLoad.cc for their video analysis needs.
+            Join thousands of content creators, developers, and privacy-conscious users who trust VidLoad for their video analysis needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

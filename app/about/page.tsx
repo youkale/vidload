@@ -4,11 +4,11 @@ import type { Metadata } from 'next';
 import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'About VidLoad.cc - Privacy-First Video Analysis Platform',
-  description: 'Learn about VidLoad.cc, a cutting-edge privacy-first video analysis platform. Process videos locally in your browser with WebAssembly technology. GDPR compliant, no data upload required.',
-  keywords: 'about VidLoad.cc, privacy-first video platform, local video processing, WebAssembly video analysis, GDPR compliant video tool, browser-based video analysis',
+  title: 'About VidLoad - Privacy-First Video Analysis Platform',
+  description: 'Learn about VidLoad, a cutting-edge privacy-first video analysis platform. Process videos locally in your browser with WebAssembly technology. GDPR compliant, no data upload required.',
+  keywords: 'about VidLoad, privacy-first video platform, local video processing, WebAssembly video analysis, GDPR compliant video tool, browser-based video analysis',
   openGraph: {
-    title: 'About VidLoad.cc - Privacy-First Video Analysis Platform',
+    title: 'About VidLoad - Privacy-First Video Analysis Platform',
     description: 'Learn about our privacy-first approach to video analysis with local browser processing.',
     url: 'https://vidload.xyz/about',
   },
@@ -29,7 +29,7 @@ export default function AboutPage() {
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
-            Back to VidLoad.cc
+            Back to VidLoad
           </Link>
           <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
             About
@@ -49,18 +49,18 @@ export default function AboutPage() {
         </div>
 
         <div className="prose prose-invert max-w-none">
-          {/* What is VidLoad.cc */}
+          {/* What is VidLoad */}
           <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4 text-blue-400">What is VidLoad.cc?</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-blue-400">What is VidLoad?</h2>
             <div className="space-y-4 text-gray-300">
               <p>
-                VidLoad.cc is a cutting-edge, browser-based video player and analysis platform that revolutionizes
+                VidLoad is a cutting-edge, browser-based video player and analysis platform that revolutionizes
                 how users interact with video content. Built with privacy-by-design principles, our platform processes
                 all video data locally in your browser using advanced WebAssembly technology.
               </p>
               <p>
                 Unlike traditional video analysis tools that require uploading your content to remote servers,
-                VidLoad.cc ensures that your videos never leave your device. This approach provides unparalleled
+                VidLoad ensures that your videos never leave your device. This approach provides unparalleled
                 privacy protection while delivering professional-grade video analysis capabilities.
               </p>
             </div>
@@ -112,14 +112,14 @@ export default function AboutPage() {
             </div>
           </section>
 
-          {/* Why Choose VidLoad.cc */}
+          {/* Why Choose VidLoad */}
           <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4 text-blue-400">Why Choose VidLoad.cc?</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-blue-400">Why Choose VidLoad?</h2>
             <div className="space-y-6 text-gray-300">
               <div>
                 <h3 className="text-lg font-semibold text-white">🛡️ Uncompromising Privacy</h3>
                 <p>
-                  In an era where data privacy is paramount, VidLoad.cc stands apart by processing all video content
+                  In an era where data privacy is paramount, VidLoad stands apart by processing all video content
                   locally in your browser. Your videos never touch our servers, ensuring complete privacy and
                   compliance with international data protection regulations.
                 </p>
@@ -128,7 +128,7 @@ export default function AboutPage() {
               <div>
                 <h3 className="text-lg font-semibold text-white">🚀 Professional-Grade Performance</h3>
                 <p>
-                  Powered by FFmpeg.wasm and optimized WebAssembly modules, VidLoad.cc delivers desktop-class
+                  Powered by FFmpeg.wasm and optimized WebAssembly modules, VidLoad delivers desktop-class
                   performance directly in your browser. Multi-threaded processing ensures fast analysis even
                   for large video files.
                 </p>
@@ -137,7 +137,7 @@ export default function AboutPage() {
               <div>
                 <h3 className="text-lg font-semibold text-white">🌐 Universal Accessibility</h3>
                 <p>
-                  No software installation required. VidLoad.cc works on any modern device with a web browser,
+                  No software installation required. VidLoad works on any modern device with a web browser,
                   making professional video analysis accessible to everyone, everywhere.
                 </p>
               </div>
@@ -145,7 +145,7 @@ export default function AboutPage() {
               <div>
                 <h3 className="text-lg font-semibold text-white">📚 AI-Friendly Documentation</h3>
                 <p>
-                  Our comprehensive documentation and structured data make VidLoad.cc perfect for integration
+                  Our comprehensive documentation and structured data make VidLoad perfect for integration
                   with AI systems, LLMs, and automated workflows.
                 </p>
               </div>
@@ -154,7 +154,7 @@ export default function AboutPage() {
 
           {/* Use Cases */}
           <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4 text-blue-400">Who Uses VidLoad.cc?</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-blue-400">Who Uses VidLoad?</h2>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-purple-900/20 border border-purple-700 rounded-lg p-4">
                 <h3 className="font-semibold text-purple-300 mb-2">Content Creators</h3>
@@ -233,7 +233,7 @@ export default function AboutPage() {
             <h2 className="text-2xl font-semibold mb-4 text-blue-400">Open Source Commitment</h2>
             <div className="space-y-4 text-gray-300">
               <p>
-                VidLoad.cc is proudly open source under the MIT License. Our commitment to transparency
+                VidLoad is proudly open source under the MIT License. Our commitment to transparency
                 extends beyond privacy policies to making our entire codebase available for public
                 inspection and contribution.
               </p>
@@ -250,7 +250,7 @@ export default function AboutPage() {
           <section className="mb-10">
             <h2 className="text-2xl font-semibold mb-4 text-blue-400">Future Roadmap</h2>
             <div className="space-y-4 text-gray-300">
-              <p>We're continuously improving VidLoad.cc with new features and capabilities:</p>
+              <p>We're continuously improving VidLoad with new features and capabilities:</p>
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <h3 className="font-semibold text-white mb-2">Upcoming Features</h3>
@@ -279,7 +279,7 @@ export default function AboutPage() {
             <h2 className="text-2xl font-semibold mb-4 text-blue-400">Get in Touch</h2>
             <div className="bg-gray-800 rounded-lg p-6">
               <p className="text-gray-300 mb-4">
-                We value feedback from our community and are always looking to improve VidLoad.cc.
+                We value feedback from our community and are always looking to improve VidLoad.
               </p>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
@@ -307,7 +307,7 @@ export default function AboutPage() {
         <div className="mt-12 pt-8 border-t border-gray-700">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-gray-400">
-              © 2024 VidLoad.cc - Privacy-First Video Analysis
+              © 2024 VidLoad - Privacy-First Video Analysis
             </div>
             <div className="flex gap-6">
               <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
