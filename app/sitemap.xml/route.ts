@@ -107,6 +107,17 @@ export async function GET(request: NextRequest) {
     <xhtml:link rel="alternate" hreflang="ja" href="${baseUrl}/video-basics?lang=ja"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="${baseUrl}/video-basics"/>
   </url>
+  <url>
+    <loc>${baseUrl}/audio</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <mobile:mobile/>
+    <xhtml:link rel="alternate" hreflang="en" href="${baseUrl}/audio"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="${baseUrl}/audio?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="${baseUrl}/audio?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="${baseUrl}/audio"/>
+  </url>
 </urlset>`
 
   return new NextResponse(sitemap, {
